@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Львівський центр ПТО ДСЗ | Сучасна професійна освіта</title>
+    <style>
+        :root {
+            --primary: #0057b8; /* Державний синій */
+            --secondary: #ffd700; /* Акцентний жовтий */
+            --dark: #1a202c;
+            --light: #f7fafc;
+            --gray: #718096;
+            --card-bg: #ffffff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+            --shadow-hover: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.6; color: var(--dark); background-color: var(--light); }
+        a { text-decoration: none; color: var(--primary); transition: 0.3s; }
+        a:hover { color: #003d82; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        /* Header */
+        header { background: #fff; box-shadow: var(--shadow); position: sticky; top: 0; z-index: 1000; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; }
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); display: flex; align-items: center; gap: 10px; }
+        .nav-links { display: flex; gap: 25px; list-style: none; }
+        .nav-links a { font-weight: 500; color: var(--dark); }
+        .btn { padding: 10px 24px; border-radius: 8px; font-weight: 600; transition: 0.3s; cursor: pointer; display: inline-block; text-align: center; border: none; }
+        .btn-primary { background: var(--primary); color: white; }
+        .btn-primary:hover { background: #004494; color: white; transform: translateY(-2px); }
+        .btn-secondary { background: var(--secondary); color: var(--dark); }
+        .btn-secondary:hover { background: #e6c200; transform: translateY(-2px); }
+        .btn-outline { border: 2px solid white; color: white; background: transparent; }
+        .btn-outline:hover { background: white; color: var(--primary); }
+
+        /* Hero */
+        .hero { background: linear-gradient(135deg, var(--primary) 0%, #003d82 100%); color: white; padding: 100px 0; text-align: center; position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=1470') center/cover; opacity: 0.08; }
+        .hero-content { position: relative; z-index: 1; max-width: 850px; margin: 0 auto; }
+        .hero h1 { font-size: 3.2rem; margin-bottom: 20px; line-height: 1.2; font-weight: 800; }
+        .hero p { font-size: 1.3rem; margin-bottom: 40px; opacity: 0.95; font-weight: 300; }
+        .hero-buttons { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+
+        /* Sections */
+        section { padding: 90px 0; }
+        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 60px; color: var(--dark); position: relative; font-weight: 700; }
+        .section-title::after { content: ''; display: block; width: 70px; height: 5px; background: var(--secondary); margin: 15px auto 0; border-radius: 3px; }
+
+        /* Features */
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 30px; }
+        .feature-card { background: var(--card-bg); padding: 35px 25px; border-radius: 16px; box-shadow: var(--shadow); text-align: center; transition: transform 0.3s, box-shadow 0.3s; border: 1px solid #edf2f7; }
+        .feature-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-hover); border-color: var(--primary); }
+        .feature-icon { font-size: 3rem; margin-bottom: 20px; }
+        .feature-card h3 { font-size: 1.3rem; margin-bottom: 12px; color: var(--primary); }
+
+        /* Courses */
+        .courses-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 35px; }
+        .course-card { background: var(--card-bg); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); display: flex; flex-direction: column; transition: 0.3s; border: 1px solid #edf2f7; }
+        .course-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); }
+        .course-img { height: 220px; background-size: cover; background-position: center; position: relative; }
+        .course-tag { position: absolute; top: 15px; left: 15px; background: var(--secondary); color: var(--dark); font-size: 0.8rem; font-weight: 800; padding: 6px 14px; border-radius: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.2); }
+        .course-content { padding: 30px; flex: 1; display: flex; flex-direction: column; }
+        .course-card h3 { font-size: 1.5rem; margin-bottom: 15px; color: var(--dark); }
+        .course-card p { color: var(--gray); margin-bottom: 25px; flex: 1; }
+        .read-more { font-weight: 700; display: inline-flex; align-items: center; gap: 8px; margin-top: auto; }
+        
+        /* News */
+        .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 35px; }
+        .news-card { background: var(--card-bg); padding: 30px; border-left: 5px solid var(--secondary); border-radius: 12px; box-shadow: var(--shadow); transition: 0.3s; display: flex; flex-direction: column; }
+        .news-card:hover { transform: translateX(8px); box-shadow: var(--shadow-hover); }
+        .news-date { font-size: 0.9rem; color: var(--gray); margin-bottom: 15px; display: flex; align-items: center; gap: 8px; font-weight: 600; }
+        .news-card h4 { font-size: 1.25rem; margin-bottom: 15px; line-height: 1.4; color: var(--dark); }
+        
+        /* Partners */
+        .partners-section { background: #fff; padding: 60px 0; text-align: center; border-top: 1px solid #edf2f7; border-bottom: 1px solid #edf2f7; }
+        .partners-grid { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 50px; opacity: 0.7; filter: grayscale(100%); transition: 0.3s; }
+        .partners-grid:hover { opacity: 1; filter: grayscale(0%); }
+        .partner-logo { font-weight: 800; font-size: 1.2rem; color: var(--gray); }
+
+        /* Footer */
+        footer { background: var(--dark); color: #cbd5e0; padding: 80px 0 30px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px; margin-bottom: 60px; }
+        footer h4 { color: white; font-size: 1.3rem; margin-bottom: 25px; position: relative; padding-bottom: 12px; }
+        footer h4::after { content: ''; position: absolute; bottom: 0; left: 0; width: 40px; height: 3px; background: var(--secondary); border-radius: 2px; }
+        footer ul { list-style: none; }
+        footer ul li { margin-bottom: 12px; }
+        footer a { color: #cbd5e0; }
+        footer a:hover { color: var(--secondary); }
+        .copyright { text-align: center; padding-top: 30px; border-top: 1px solid #2d3748; font-size: 0.95rem; color: #718096; }
+        
+        /* Accessibility */
+        .skip-link { position: absolute; top: -40px; left: 0; background: var(--primary); color: white; padding: 8px 16px; z-index: 100; transition: 0.3s; }
+        .skip-link:focus { top: 0; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero { padding: 70px 0; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero p { font-size: 1.1rem; }
+            .section-title { font-size: 2rem; }
+            section { padding: 60px 0; }
+            .partners-grid { gap: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="#main" class="skip-link">Перейти до основного вмісту</a>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <span style="font-size: 2rem;">🎓</span>
+                <span>ЛЦ ПТО ДСЗ</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Головна</a></li>
+                <li><a href="#courses">Курси</a></li>
+                <li><a href="#about">Про центр</a></li>
+                <li><a href="#news">Новини</a></li>
+                <li><a href="#contacts">Контакти</a></li>
+            </ul>
+            <a href="#courses" class="btn btn-primary">Вступити</a>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="hero" id="home">
+            <div class="container hero-content">
+                <h1>Твій квиток у професійне майбутнє</h1>
+                <p>Львівський центр професійно-технічної освіти Державної служби зайнятості. Здобувай затребувані професії, підвищуй кваліфікацію та будуй кар'єру вже сьогодні!</p>
+                <div class="hero-buttons">
+                    <a href="#courses" class="btn btn-secondary">🚀 Обрати курс</a>
+                    <a href="#contacts" class="btn btn-outline">Отримати консультацію</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h2 class="section-title">Чому обирають нас?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🛠️</div>
+                        <h3>Сучасне обладнання</h3>
+                        <p>Навчання на новітній техніці, агродронах та 3D-принтерах завдяки міжнародним грантовим проєктам.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💼</div>
+                        <h3>Гарантія працевлаштування</h3>
+                        <p>Повна підтримка Державної служби зайнятості та співпраця з провідними роботодавцями регіону.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎓</div>
+                        <h3>Офіційні сертифікати</h3>
+                        <p>Документи державного зразка, що підтверджують вашу кваліфікацію в Україні та за кордоном.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🤝</div>
+                        <h3>Доступність для всіх</h3>
+                        <p>Безкоштовне навчання для безробітних, ВПО та ветеранів. Зручний графік занять.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="courses" style="background: #fff;">
+            <div class="container">
+                <h2 class="section-title">Популярні напрямки навчання</h2>
+                <div class="courses-grid">
+                    <div class="course-card">
+                        <div class="course-img" style="background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800');">
+                            <span class="course-tag">IT СФЕРА</span>
+                        </div>
+                        <div class="course-content">
+                            <h3>Тестувальник ПЗ (QA)</h3>
+                            <p>Опануйте затребувану IT-професію. Manual та автоматизоване тестування, робота з баг-трекінгом та сучасними інструментами.</p>
+                            <a href="#" class="read-more">Детальніше про курс →</a>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-img" style="background-image: url('https://images.unsplash.com/photo-1585435557343-3b092031a831?auto=format&fit=crop&q=80&w=800');">
+                            <span class="course-tag">АГРО-ТЕХ</span>
+                        </div>
+                        <div class="course-content">
+                            <h3>Оператор агродронів</h3>
+                            <p>Знання, що рятують врожай! Навчіться керувати БПЛА для моніторингу полів, оцифрування та точного внесення добрив.</p>
+                            <a href="#" class="read-more">Детальніше про курс →</a>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-img" style="background-image: url('https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&q=80&w=800');">
+                            <span class="course-tag">ДИЗАЙН & TECH</span>
+                        </div>
+                        <div class="course-content">
+                            <h3>Цифровий крій та 3D-друк</h3>
+                            <p>Поєднання легкої промисловості та інновацій. Створюйте адаптивний одяг та використовуйте 3D-моделювання у дизайні.</p>
+                            <a href="#" class="read-more">Детальніше про курс →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="news">
+            <div class="container">
+                <h2 class="section-title">Останні новини</h2>
+                <div class="news-grid">
+                    <div class="news-card">
+                        <div class="news-date">📅 13 Травня 2026</div>
+                        <h4>Перша група успішно завершила навчання з використання агродронів!</h4>
+                        <p>Наші випускники готові до роботи в сільському господарстві з використанням безпілотних літальних апаратів.</p>
+                        <a href="#" class="read-more">Читати новину →</a>
+                    </div>
+                    <div class="news-card">
+                        <div class="news-date">📅 04 Травня 2026</div>
+                        <h4>Старт проєкту REMARKET: навчання для бізнесу</h4>
+                        <p>Перша група розпочала навчання для тих, хто бажає розпочати або розширити свій власний бізнес в умовах сьогодення.</p>
+                        <a href="#" class="read-more">Читати новину →</a>
+                    </div>
+                    <div class="news-card">
+                        <div class="news-date">📅 27 Березня 2026</div>
+                        <h4>Інвестиції у професійну освіту мають довгострокову цінність</h4>
+                        <p>Результати проєкту «SKILLS FACTORY» продовжують масштабуватися поза межами грантової підтримки ЄС.</p>
+                        <a href="#" class="read-more">Читати новину →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="partners-section">
+            <div class="container">
+                <p style="margin-bottom: 30px; font-weight: 600; color: var(--gray); text-transform: uppercase; letter-spacing: 1px;">Реалізуємо проєкти за підтримки:</p>
+                <div class="partners-grid">
+                    <div class="partner-logo">🇪🇺 Європейський Союз</div>
+                    <div class="partner-logo">GIZ Ukraine</div>
+                    <div class="partner-logo">Solidarity Fund PL</div>
+                    <div class="partner-logo">Skills4Recovery</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="contacts">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4>ЛЦ ПТО ДСЗ</h4>
+                    <p>Сучасний центр професійно-технічної освіти у Львові. Формуємо фахівців для відбудови та економічного розвитку України.</p>
+                </div>
+                <div>
+                    <h4>Навігація</h4>
+                    <ul>
+                        <li><a href="#home">Головна</a></li>
+                        <li><a href="#courses">Всі курси</a></li>
+                        <li><a href="#news">Новини</a></li>
+                        <li><a href="#">Вступнику</a></li>
+                        <li><a href="#">Партнерам</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Контакти</h4>
+                    <ul>
+                        <li>📍 м. Львів</li>
+                        <li>📞 <a href="tel:+380322000000">+38 (032) 000-00-00</a></li>
+                        <li>✉️ <a href="mailto:info@lcptodcz.lviv.ua">info@lcptodcz.lviv.ua</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Інформація</h4>
+                    <ul>
+                        <li><a href="#">Публічні закупівлі</a></li>
+                        <li><a href="#">Вакансії центру</a></li>
+                        <li><a href="#">Версія для людей з порушеннями зору</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 Львівський центр ПТО ДСЗ. Усі права захищено.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
