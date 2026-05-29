@@ -47,15 +47,17 @@
             --muted: #64717d;
             --line: #d8e1e8;
             --paper: #fbfbf7;
+            --mist: #edf6f5;
             --white: #ffffff;
             --blue: #133c55;
+            --navy: #0b2738;
             --teal: #006d77;
             --cyan: #2a9d8f;
             --amber: #f4a261;
             --green: #3a7d44;
             --red: #b94a48;
-            --shadow: 0 12px 32px rgba(16, 35, 49, 0.12);
-            --shadow-soft: 0 6px 18px rgba(16, 35, 49, 0.08);
+            --shadow: 0 18px 46px rgba(16, 35, 49, 0.14);
+            --shadow-soft: 0 8px 24px rgba(16, 35, 49, 0.09);
             --radius: 8px;
             --header-height: 76px;
             --container: 1180px;
@@ -75,7 +77,9 @@
             margin: 0;
             font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
             color: var(--ink);
-            background: var(--paper);
+            background:
+                linear-gradient(180deg, rgba(237, 246, 245, 0.72) 0, rgba(251, 251, 247, 0) 360px),
+                var(--paper);
             line-height: 1.65;
         }
 
@@ -128,7 +132,7 @@
         }
 
         .topbar {
-            background: var(--ink);
+            background: var(--navy);
             color: rgba(255, 255, 255, 0.88);
             font-size: 0.9rem;
         }
@@ -182,7 +186,8 @@
             display: grid;
             place-items: center;
             color: var(--white);
-            background: var(--blue);
+            background:
+                linear-gradient(135deg, var(--blue), var(--teal));
             font-weight: 800;
             letter-spacing: 0;
         }
@@ -263,26 +268,35 @@
         }
 
         .hero {
-            min-height: calc(100vh - var(--header-height) - 36px);
+            min-height: min(760px, calc(100vh - var(--header-height) - 36px));
             display: grid;
             align-items: end;
             color: var(--white);
             background-image:
-                linear-gradient(90deg, rgba(16, 35, 49, 0.9) 0%, rgba(16, 35, 49, 0.72) 48%, rgba(16, 35, 49, 0.18) 100%),
+                linear-gradient(90deg, rgba(8, 26, 38, 0.94) 0%, rgba(16, 35, 49, 0.78) 50%, rgba(16, 35, 49, 0.2) 100%),
                 url("https://rada.info/upload/users_files/36738974/slides/84351624_1382767518580781_5680015827152142336_n.jpg");
             background-size: cover;
             background-position: center;
             padding: 104px 0 72px;
         }
 
+        .hero-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+            gap: 32px;
+            align-items: end;
+        }
+
         .hero-content {
             max-width: 840px;
+            min-width: 0;
         }
 
         .eyebrow {
             display: inline-flex;
             align-items: center;
             gap: 8px;
+            max-width: 100%;
             margin-bottom: 18px;
             padding: 6px 10px;
             border: 1px solid rgba(255, 255, 255, 0.42);
@@ -290,6 +304,8 @@
             color: rgba(255, 255, 255, 0.92);
             font-weight: 700;
             font-size: 0.92rem;
+            line-height: 1.35;
+            overflow-wrap: anywhere;
             background: rgba(16, 35, 49, 0.34);
         }
 
@@ -299,6 +315,7 @@
             font-size: 3.7rem;
             line-height: 1.04;
             letter-spacing: 0;
+            overflow-wrap: anywhere;
         }
 
         .hero p {
@@ -354,6 +371,79 @@
             color: var(--blue);
             background: var(--white);
             border-color: var(--line);
+        }
+
+        .quick-route-panel {
+            min-width: 0;
+            border: 1px solid rgba(255, 255, 255, 0.28);
+            border-radius: var(--radius);
+            background: rgba(251, 251, 247, 0.94);
+            color: var(--ink);
+            box-shadow: var(--shadow);
+            padding: 18px;
+        }
+
+        .quick-route-panel h2 {
+            margin: 0 0 12px;
+            font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+            font-size: 1.05rem;
+            line-height: 1.25;
+            color: var(--blue);
+        }
+
+        .quick-route-list {
+            display: grid;
+            gap: 8px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .quick-route-list a {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 10px;
+            align-items: start;
+            min-height: 54px;
+            padding: 11px;
+            border: 1px solid rgba(16, 35, 49, 0.1);
+            border-radius: var(--radius);
+            color: var(--ink);
+            background: var(--white);
+            text-decoration: none;
+        }
+
+        .quick-route-list a:hover {
+            border-color: rgba(0, 109, 119, 0.38);
+            background: var(--mist);
+        }
+
+        .route-index {
+            display: inline-grid;
+            place-items: center;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--blue);
+            color: var(--white);
+            font-weight: 800;
+            font-size: 0.78rem;
+        }
+
+        .route-copy strong,
+        .route-copy span {
+            display: block;
+        }
+
+        .route-copy strong {
+            color: var(--blue);
+            line-height: 1.2;
+        }
+
+        .route-copy span {
+            color: var(--muted);
+            font-size: 0.86rem;
+            line-height: 1.35;
         }
 
         .hero-metrics {
@@ -552,16 +642,72 @@
             gap: 14px;
         }
 
+        .catalog-control-panel {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto;
+            gap: 18px;
+            align-items: center;
+            margin: -8px 0 22px;
+            padding: 18px;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            background:
+                linear-gradient(90deg, rgba(237, 246, 245, 0.92), rgba(255, 255, 255, 0.96));
+            box-shadow: var(--shadow-soft);
+        }
+
+        .catalog-control-panel h3 {
+            margin-bottom: 4px;
+            color: var(--blue);
+        }
+
+        .catalog-control-panel p {
+            margin: 0;
+        }
+
+        .category-pills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 8px;
+        }
+
+        .category-pill {
+            display: inline-flex;
+            align-items: center;
+            min-height: 34px;
+            padding: 6px 10px;
+            border: 1px solid rgba(19, 60, 85, 0.14);
+            border-radius: var(--radius);
+            background: var(--white);
+            color: var(--blue);
+            font-weight: 800;
+            font-size: 0.84rem;
+        }
+
         .profession-card {
-            min-height: 244px;
+            min-height: 252px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             gap: 14px;
+            transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+        }
+
+        .profession-card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(0, 109, 119, 0.34);
+            box-shadow: var(--shadow);
         }
 
         .profession-card h3 {
             min-height: 62px;
+            color: var(--blue);
+        }
+
+        .profession-card a {
+            align-self: flex-start;
+            font-weight: 800;
         }
 
         .profession-meta {
@@ -630,6 +776,39 @@
             display: block;
             color: var(--blue);
             margin-bottom: 4px;
+        }
+
+        .contact-action-grid {
+            display: grid;
+            gap: 10px;
+            margin-top: 18px;
+        }
+
+        .contact-action {
+            display: grid;
+            gap: 4px;
+            padding: 14px;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            background: var(--white);
+            color: var(--ink);
+            text-decoration: none;
+        }
+
+        .contact-action:hover {
+            border-color: rgba(0, 109, 119, 0.38);
+            background: var(--mist);
+        }
+
+        .contact-action strong {
+            color: var(--blue);
+            line-height: 1.25;
+        }
+
+        .contact-action span {
+            color: var(--muted);
+            font-size: 0.9rem;
+            line-height: 1.35;
         }
 
         .directory-toolbar {
@@ -714,12 +893,16 @@
                 border-bottom: 1px solid var(--line);
                 box-shadow: var(--shadow);
                 padding: 16px;
-                transform: translateY(-130%);
-                transition: transform 180ms ease;
+                transform: translateY(calc(-100% - 180px));
+                opacity: 0;
+                pointer-events: none;
+                transition: transform 180ms ease, opacity 180ms ease;
             }
 
             .nav.active {
                 transform: translateY(0);
+                opacity: 1;
+                pointer-events: auto;
             }
 
             .nav-list {
@@ -743,6 +926,15 @@
             .grid.four,
             .profession-grid {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .hero-layout,
+            .catalog-control-panel {
+                grid-template-columns: 1fr;
+            }
+
+            .category-pills {
+                justify-content: flex-start;
             }
 
             .directory-groups {
@@ -793,8 +985,29 @@
                 background-position: 58% center;
             }
 
+            .hero-layout,
+            .hero-content,
+            .quick-route-panel,
+            .hero-metrics {
+                max-width: min(100%, 358px);
+            }
+
             .hero h1 {
-                font-size: 2.4rem;
+                font-size: 1.58rem;
+                line-height: 1.12;
+            }
+
+            .eyebrow {
+                display: block;
+                font-size: 0.82rem;
+            }
+
+            .quick-route-panel {
+                margin-top: 10px;
+            }
+
+            .hero-actions .button {
+                width: 100%;
             }
 
             h2 {
@@ -870,20 +1083,45 @@
     <main id="main-content">
         <section class="hero" id="home" aria-labelledby="heroTitle">
             <div class="container">
-                <div class="hero-content">
-                    <span class="eyebrow">Державний професійно-технічний навчальний заклад</span>
-                    <h1 id="heroTitle">Львівський центр професійно-технічної освіти державної служби зайнятості</h1>
-                    <p>Професійна підготовка, перепідготовка та підвищення кваліфікації дорослого населення за професіями, потрібними ринку праці, роботодавцям і людям, які планують новий кар'єрний крок.</p>
-                    <div class="hero-actions">
-                        <a class="button primary" href="#professions">Переглянути професії</a>
-                        <a class="button secondary" href="#contacts">Зв'язатися з центром</a>
+                <div class="hero-layout">
+                    <div class="hero-content">
+                        <span class="eyebrow">Державний професійно-технічний навчальний заклад</span>
+                        <h1 id="heroTitle">Львівський центр професійно-технічної освіти державної служби зайнятості</h1>
+                        <p>Професійна підготовка, перепідготовка та підвищення кваліфікації дорослого населення за професіями, потрібними ринку праці, роботодавцям і людям, які планують новий кар'єрний крок.</p>
+                        <div class="hero-actions">
+                            <a class="button primary" href="#professions">Переглянути професії</a>
+                            <a class="button secondary" href="#contacts">Зв'язатися з центром</a>
+                        </div>
+                        <div class="hero-metrics" aria-label="Ключові дані центру">
+                            <div class="metric"><strong>17</strong><span>професійних сторінок у поточному каталозі</span></div>
+                            <div class="metric"><strong>19</strong><span>професій визнано атестованими МОН</span></div>
+                            <div class="metric"><strong>2026</strong><span>актуальні новини та графіки навчання</span></div>
+                            <div class="metric"><strong>79060</strong><span>поштовий індекс центру у Львові</span></div>
+                        </div>
                     </div>
-                    <div class="hero-metrics" aria-label="Ключові дані центру">
-                        <div class="metric"><strong>17</strong><span>професійних сторінок у поточному каталозі</span></div>
-                        <div class="metric"><strong>19</strong><span>професій визнано атестованими МОН</span></div>
-                        <div class="metric"><strong>2026</strong><span>актуальні новини та графіки навчання</span></div>
-                        <div class="metric"><strong>79060</strong><span>поштовий індекс центру у Львові</span></div>
-                    </div>
+                    <aside class="quick-route-panel" aria-labelledby="quickRouteTitle">
+                        <h2 id="quickRouteTitle">Швидко перейти до потрібного</h2>
+                        <ul class="quick-route-list">
+                            <li>
+                                <a data-quick-route="professions" href="#professions">
+                                    <span class="route-index">1</span>
+                                    <span class="route-copy"><strong>Обрати професію</strong><span>17 напрямів з короткими описами та посиланнями</span></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a data-quick-route="students" href="#students">
+                                    <span class="route-index">2</span>
+                                    <span class="route-copy"><strong>Знайти умови навчання</strong><span>Пільгові програми, практика, підтримка слухачів</span></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a data-quick-route="contacts" href="#contacts">
+                                    <span class="route-index">3</span>
+                                    <span class="route-copy"><strong>Зв'язатися з центром</strong><span>Телефони, пошта, адреса та карта проїзду</span></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </aside>
                 </div>
             </div>
         </section>
@@ -924,6 +1162,19 @@
                     <p class="section-kicker">Освітні послуги</p>
                     <h2 id="professionsTitle">Повний перелік професійних сторінок з джерельного сайту</h2>
                     <p class="lead">На базі центру здійснюється професійне навчання безробітних громадян для різних галузей економіки: сільське господарство, промисловість, енергетика, будівництво, торгівля, транспорт, сфера послуг, легка промисловість і цифрові навички.</p>
+                </div>
+                <div class="catalog-control-panel" aria-label="Огляд каталогу професій">
+                    <div>
+                        <h3>Каталог для швидкого сканування</h3>
+                        <p>Професії згруповано тегами, щоб абітурієнт або консультант служби зайнятості швидше знайшов потрібний напрям.</p>
+                    </div>
+                    <div class="category-pills" aria-label="Основні напрями професій">
+                        <span class="category-pill" data-category-pill="industry">Промисловість</span>
+                        <span class="category-pill" data-category-pill="transport">Транспорт</span>
+                        <span class="category-pill" data-category-pill="trade">Торгівля</span>
+                        <span class="category-pill" data-category-pill="services">Послуги</span>
+                        <span class="category-pill" data-category-pill="digital">Цифрові навички</span>
+                    </div>
                 </div>
                 <div class="profession-grid">
                     <article class="card profession-card" data-profession-card="elektrogazozvarnik">
@@ -1199,10 +1450,23 @@
                     <div class="card blue">
                         <h3>Швидкий зв'язок</h3>
                         <p>Для консультації щодо навчання, графіків формування груп, практики або співпраці з роботодавцями звертайтеся телефоном чи електронною поштою.</p>
-                        <div class="section-actions">
-                            <a class="button primary" href="mailto:profc@locz.gov.ua">Написати листа</a>
-                            <a class="button light" href="https://goo.gl/maps/zstjAYaHP922" target="_blank" rel="noopener">Google Maps</a>
-                            <a class="button light" href="https://lcptodcz.lviv.ua/feedback/" target="_blank" rel="noopener">Зворотний зв'язок</a>
+                        <div class="contact-action-grid">
+                            <a class="contact-action" href="mailto:profc@locz.gov.ua?subject=%D0%97%D0%B0%D0%BF%D0%B8%D1%82%20%D0%BF%D1%80%D0%BE%20%D0%BD%D0%B0%D0%B2%D1%87%D0%B0%D0%BD%D0%BD%D1%8F">
+                                <strong>Запитати про навчання</strong>
+                                <span>profc@locz.gov.ua</span>
+                            </a>
+                            <a class="contact-action" href="tel:+380322322262">
+                                <strong>Подзвонити у приймальну</strong>
+                                <span>(032) 232-22-62</span>
+                            </a>
+                            <a class="contact-action" href="https://goo.gl/maps/zstjAYaHP922" target="_blank" rel="noopener">
+                                <strong>Побудувати маршрут</strong>
+                                <span>Google Maps, вул. Княгині Ольги, 122</span>
+                            </a>
+                            <a class="contact-action" href="https://lcptodcz.lviv.ua/feedback/" target="_blank" rel="noopener">
+                                <strong>Залишити звернення</strong>
+                                <span>Форма зворотного зв'язку джерельного сайту</span>
+                            </a>
                         </div>
                     </div>
                 </div>

@@ -89,3 +89,15 @@ test('keeps the expanded content navigable on a one-page site', () => {
     'aria-controls="sourceDirectory"',
   ]);
 });
+
+test('adds portal-first UX affordances for the profession catalog', () => {
+  includesAll([
+    'class="quick-route-panel"',
+    'data-quick-route="professions"',
+    'data-quick-route="contacts"',
+    'class="catalog-control-panel"',
+    'data-category-pill="transport"',
+    'class="contact-action-grid"',
+    'Запитати про навчання',
+  ]);
+});
