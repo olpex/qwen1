@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "codebase-recon": {
+      "source": "yujiachen-y/codebase-recon-skill",
+      "sourceType": "github",
+      "skillPath": "skills/codebase-recon/SKILL.md",
+      "computedHash": "59cdbfc2e114c7448a213c8abb71fedd3490d78d70981ae85fa8ca998cf01ca9"
+    }
+  }
+}

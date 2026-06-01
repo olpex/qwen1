@@ -3,287 +3,1709 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Львівський центр ПТО ДСЗ | Сучасна професійна освіта</title>
+    <meta name="description" content="Львівський центр професійно-технічної освіти державної служби зайнятості: професійне навчання, перепідготовка, підвищення кваліфікації, інформація для слухачів і роботодавців.">
+    <meta name="keywords" content="ЛЦПТО ДСЗ, Львівський центр ПТО, професійна освіта Львів, служба зайнятості, навчання безробітних, робітничі професії">
+    <meta name="author" content="Львівський центр ПТО ДСЗ">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://olpex.github.io/qwen1/">
+    <meta property="og:title" content="ЛЦПТО ДСЗ | Львівський центр професійно-технічної освіти">
+    <meta property="og:description" content="Повна навігація за освітніми послугами, професіями, новинами, контактами та сервісами Львівського центру ПТО ДСЗ.">
+    <meta property="og:image" content="https://rada.info/upload/users_files/36738974/slides/84351624_1382767518580781_5680015827152142336_n.jpg">
+    <meta property="og:locale" content="uk_UA">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700;800&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23133c55'/%3E%3Ctext x='32' y='39' font-family='Arial' font-size='22' font-weight='700' text-anchor='middle' fill='white'%3ELC%3C/text%3E%3C/svg%3E">
+    <title>ЛЦПТО ДСЗ | Львівський центр професійно-технічної освіти</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Львівський центр професійно-технічної освіти державної служби зайнятості",
+      "alternateName": "ЛЦПТО ДСЗ",
+      "url": "https://olpex.github.io/qwen1/",
+      "logo": "https://rada.info/upload/users_files/36738974/gerb/1.png",
+      "description": "Державний професійно-технічний навчальний заклад, що здійснює професійну підготовку, перепідготовку та підвищення кваліфікації.",
+      "identifier": "36738974",
+      "address": {
+        "@type": "PostalAddress",
+        "postalCode": "79060",
+        "streetAddress": "вул. Княгині Ольги, буд. 122",
+        "addressLocality": "Львів",
+        "addressRegion": "Львівська область",
+        "addressCountry": "UA"
+      },
+      "email": "profc@locz.gov.ua",
+      "telephone": "+380322322262"
+    }
+    </script>
     <style>
         :root {
-            --primary: #0057b8; /* Державний синій */
-            --secondary: #ffd700; /* Акцентний жовтий */
-            --dark: #1a202c;
-            --light: #f7fafc;
-            --gray: #718096;
-            --card-bg: #ffffff;
-            --shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
-            --shadow-hover: 0 10px 25px rgba(0, 0, 0, 0.1);
+            --ink: #102331;
+            --ink-soft: #31485a;
+            --muted: #64717d;
+            --line: #d8e1e8;
+            --paper: #fbfbf7;
+            --mist: #edf6f5;
+            --white: #ffffff;
+            --blue: #133c55;
+            --navy: #0b2738;
+            --teal: #006d77;
+            --cyan: #2a9d8f;
+            --amber: #f4a261;
+            --green: #3a7d44;
+            --red: #b94a48;
+            --shadow: 0 18px 46px rgba(16, 35, 49, 0.14);
+            --shadow-soft: 0 8px 24px rgba(16, 35, 49, 0.09);
+            --radius: 8px;
+            --header-height: 76px;
+            --container: 1180px;
+            --focus: 0 0 0 3px rgba(42, 157, 143, 0.35);
         }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.6; color: var(--dark); background-color: var(--light); }
-        a { text-decoration: none; color: var(--primary); transition: 0.3s; }
-        a:hover { color: #003d82; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
 
-        /* Header */
-        header { background: #fff; box-shadow: var(--shadow); position: sticky; top: 0; z-index: 1000; }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; }
-        .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); display: flex; align-items: center; gap: 10px; }
-        .nav-links { display: flex; gap: 25px; list-style: none; }
-        .nav-links a { font-weight: 500; color: var(--dark); }
-        .btn { padding: 10px 24px; border-radius: 8px; font-weight: 600; transition: 0.3s; cursor: pointer; display: inline-block; text-align: center; border: none; }
-        .btn-primary { background: var(--primary); color: white; }
-        .btn-primary:hover { background: #004494; color: white; transform: translateY(-2px); }
-        .btn-secondary { background: var(--secondary); color: var(--dark); }
-        .btn-secondary:hover { background: #e6c200; transform: translateY(-2px); }
-        .btn-outline { border: 2px solid white; color: white; background: transparent; }
-        .btn-outline:hover { background: white; color: var(--primary); }
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
 
-        /* Hero */
-        .hero { background: linear-gradient(135deg, var(--primary) 0%, #003d82 100%); color: white; padding: 100px 0; text-align: center; position: relative; overflow: hidden; }
-        .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=1470') center/cover; opacity: 0.08; }
-        .hero-content { position: relative; z-index: 1; max-width: 850px; margin: 0 auto; }
-        .hero h1 { font-size: 3.2rem; margin-bottom: 20px; line-height: 1.2; font-weight: 800; }
-        .hero p { font-size: 1.3rem; margin-bottom: 40px; opacity: 0.95; font-weight: 300; }
-        .hero-buttons { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+        body {
+            margin: 0;
+            font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+            color: var(--ink);
+            background:
+                linear-gradient(180deg, rgba(237, 246, 245, 0.72) 0, rgba(251, 251, 247, 0) 360px),
+                var(--paper);
+            line-height: 1.65;
+        }
 
-        /* Sections */
-        section { padding: 90px 0; }
-        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 60px; color: var(--dark); position: relative; font-weight: 700; }
-        .section-title::after { content: ''; display: block; width: 70px; height: 5px; background: var(--secondary); margin: 15px auto 0; border-radius: 3px; }
+        body.nav-open {
+            overflow: hidden;
+        }
 
-        /* Features */
-        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 30px; }
-        .feature-card { background: var(--card-bg); padding: 35px 25px; border-radius: 16px; box-shadow: var(--shadow); text-align: center; transition: transform 0.3s, box-shadow 0.3s; border: 1px solid #edf2f7; }
-        .feature-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-hover); border-color: var(--primary); }
-        .feature-icon { font-size: 3rem; margin-bottom: 20px; }
-        .feature-card h3 { font-size: 1.3rem; margin-bottom: 12px; color: var(--primary); }
+        a {
+            color: var(--teal);
+            text-decoration-thickness: 1px;
+            text-underline-offset: 0.18em;
+        }
 
-        /* Courses */
-        .courses-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 35px; }
-        .course-card { background: var(--card-bg); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); display: flex; flex-direction: column; transition: 0.3s; border: 1px solid #edf2f7; }
-        .course-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); }
-        .course-img { height: 220px; background-size: cover; background-position: center; position: relative; }
-        .course-tag { position: absolute; top: 15px; left: 15px; background: var(--secondary); color: var(--dark); font-size: 0.8rem; font-weight: 800; padding: 6px 14px; border-radius: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.2); }
-        .course-content { padding: 30px; flex: 1; display: flex; flex-direction: column; }
-        .course-card h3 { font-size: 1.5rem; margin-bottom: 15px; color: var(--dark); }
-        .course-card p { color: var(--gray); margin-bottom: 25px; flex: 1; }
-        .read-more { font-weight: 700; display: inline-flex; align-items: center; gap: 8px; margin-top: auto; }
-        
-        /* News */
-        .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 35px; }
-        .news-card { background: var(--card-bg); padding: 30px; border-left: 5px solid var(--secondary); border-radius: 12px; box-shadow: var(--shadow); transition: 0.3s; display: flex; flex-direction: column; }
-        .news-card:hover { transform: translateX(8px); box-shadow: var(--shadow-hover); }
-        .news-date { font-size: 0.9rem; color: var(--gray); margin-bottom: 15px; display: flex; align-items: center; gap: 8px; font-weight: 600; }
-        .news-card h4 { font-size: 1.25rem; margin-bottom: 15px; line-height: 1.4; color: var(--dark); }
-        
-        /* Partners */
-        .partners-section { background: #fff; padding: 60px 0; text-align: center; border-top: 1px solid #edf2f7; border-bottom: 1px solid #edf2f7; }
-        .partners-grid { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 50px; opacity: 0.7; filter: grayscale(100%); transition: 0.3s; }
-        .partners-grid:hover { opacity: 1; filter: grayscale(0%); }
-        .partner-logo { font-weight: 800; font-size: 1.2rem; color: var(--gray); }
+        a:hover {
+            color: var(--blue);
+        }
 
-        /* Footer */
-        footer { background: var(--dark); color: #cbd5e0; padding: 80px 0 30px; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px; margin-bottom: 60px; }
-        footer h4 { color: white; font-size: 1.3rem; margin-bottom: 25px; position: relative; padding-bottom: 12px; }
-        footer h4::after { content: ''; position: absolute; bottom: 0; left: 0; width: 40px; height: 3px; background: var(--secondary); border-radius: 2px; }
-        footer ul { list-style: none; }
-        footer ul li { margin-bottom: 12px; }
-        footer a { color: #cbd5e0; }
-        footer a:hover { color: var(--secondary); }
-        .copyright { text-align: center; padding-top: 30px; border-top: 1px solid #2d3748; font-size: 0.95rem; color: #718096; }
-        
-        /* Accessibility */
-        .skip-link { position: absolute; top: -40px; left: 0; background: var(--primary); color: white; padding: 8px 16px; z-index: 100; transition: 0.3s; }
-        .skip-link:focus { top: 0; }
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .hero { padding: 70px 0; }
-            .hero h1 { font-size: 2.2rem; }
-            .hero p { font-size: 1.1rem; }
-            .section-title { font-size: 2rem; }
-            section { padding: 60px 0; }
-            .partners-grid { gap: 30px; }
+        :focus-visible {
+            outline: none;
+            box-shadow: var(--focus);
+            border-radius: var(--radius);
+        }
+
+        .skip-link {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            transform: translateY(-140%);
+            z-index: 10000;
+            background: var(--blue);
+            color: var(--white);
+            padding: 10px 14px;
+            border-radius: var(--radius);
+            font-weight: 700;
+        }
+
+        .skip-link:focus {
+            transform: translateY(0);
+        }
+
+        .container {
+            width: min(100% - 32px, var(--container));
+            margin: 0 auto;
+        }
+
+        .topbar {
+            background: var(--navy);
+            color: rgba(255, 255, 255, 0.88);
+            font-size: 0.9rem;
+        }
+
+        .topbar .container {
+            display: flex;
+            justify-content: space-between;
+            gap: 18px;
+            padding: 8px 0;
+            flex-wrap: wrap;
+        }
+
+        .topbar a {
+            color: var(--white);
+        }
+
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(251, 251, 247, 0.96);
+            border-bottom: 1px solid rgba(16, 35, 49, 0.12);
+            backdrop-filter: blur(14px);
+        }
+
+        .header.scrolled {
+            box-shadow: var(--shadow-soft);
+        }
+
+        .header-row {
+            min-height: var(--header-height);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-width: 260px;
+            color: var(--ink);
+            text-decoration: none;
+        }
+
+        .brand-mark {
+            width: 48px;
+            height: 48px;
+            border-radius: var(--radius);
+            display: grid;
+            place-items: center;
+            color: var(--white);
+            background:
+                linear-gradient(135deg, var(--blue), var(--teal));
+            font-weight: 800;
+            letter-spacing: 0;
+        }
+
+        .brand-name {
+            display: block;
+            font-weight: 800;
+            font-size: 1.05rem;
+            color: var(--blue);
+            line-height: 1.2;
+        }
+
+        .brand-subtitle {
+            display: block;
+            color: var(--muted);
+            font-size: 0.78rem;
+            line-height: 1.25;
+        }
+
+        .nav-list {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .nav-link {
+            display: inline-flex;
+            align-items: center;
+            min-height: 42px;
+            padding: 8px 10px;
+            border-radius: var(--radius);
+            color: var(--ink-soft);
+            font-weight: 700;
+            font-size: 0.92rem;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            background: rgba(0, 109, 119, 0.1);
+            color: var(--teal);
+        }
+
+        .menu-button {
+            display: none;
+            width: 44px;
+            height: 44px;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            background: var(--white);
+            padding: 0;
+            cursor: pointer;
+        }
+
+        .menu-button span {
+            display: block;
+            width: 21px;
+            height: 2px;
+            margin: 5px auto;
+            background: var(--ink);
+            transition: transform 160ms ease, opacity 160ms ease;
+        }
+
+        .menu-button.active span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        .menu-button.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-button.active span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+
+        .hero {
+            min-height: min(760px, calc(100vh - var(--header-height) - 36px));
+            display: grid;
+            align-items: end;
+            color: var(--white);
+            background-image:
+                linear-gradient(90deg, rgba(8, 26, 38, 0.94) 0%, rgba(16, 35, 49, 0.78) 50%, rgba(16, 35, 49, 0.2) 100%),
+                url("https://rada.info/upload/users_files/36738974/slides/84351624_1382767518580781_5680015827152142336_n.jpg");
+            background-size: cover;
+            background-position: center;
+            padding: 104px 0 72px;
+        }
+
+        .hero-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+            gap: 32px;
+            align-items: end;
+        }
+
+        .hero-content {
+            max-width: 840px;
+            min-width: 0;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            max-width: 100%;
+            margin-bottom: 18px;
+            padding: 6px 10px;
+            border: 1px solid rgba(255, 255, 255, 0.42);
+            border-radius: var(--radius);
+            color: rgba(255, 255, 255, 0.92);
+            font-weight: 700;
+            font-size: 0.92rem;
+            line-height: 1.35;
+            overflow-wrap: anywhere;
+            background: rgba(16, 35, 49, 0.34);
+        }
+
+        .hero h1 {
+            margin: 0 0 22px;
+            font-family: "Source Serif 4", Georgia, serif;
+            font-size: 3.7rem;
+            line-height: 1.04;
+            letter-spacing: 0;
+            overflow-wrap: anywhere;
+        }
+
+        .hero p {
+            max-width: 740px;
+            margin: 0 0 32px;
+            color: rgba(255, 255, 255, 0.92);
+            font-size: 1.18rem;
+        }
+
+        .hero-actions,
+        .section-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 46px;
+            padding: 11px 18px;
+            border: 1px solid transparent;
+            border-radius: var(--radius);
+            font-weight: 800;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .button.primary {
+            background: var(--amber);
+            color: var(--ink);
+        }
+
+        .button.primary:hover {
+            background: #e9914d;
+            color: var(--ink);
+        }
+
+        .button.secondary {
+            color: var(--white);
+            border-color: rgba(255, 255, 255, 0.64);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .button.secondary:hover {
+            background: var(--white);
+            color: var(--blue);
+        }
+
+        .button.light {
+            color: var(--blue);
+            background: var(--white);
+            border-color: var(--line);
+        }
+
+        .quick-route-panel {
+            min-width: 0;
+            border: 1px solid rgba(255, 255, 255, 0.28);
+            border-radius: var(--radius);
+            background: rgba(251, 251, 247, 0.94);
+            color: var(--ink);
+            box-shadow: var(--shadow);
+            padding: 18px;
+        }
+
+        .quick-route-panel h2 {
+            margin: 0 0 12px;
+            font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+            font-size: 1.05rem;
+            line-height: 1.25;
+            color: var(--blue);
+        }
+
+        .quick-route-list {
+            display: grid;
+            gap: 8px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .quick-route-list a {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 10px;
+            align-items: start;
+            min-height: 54px;
+            padding: 11px;
+            border: 1px solid rgba(16, 35, 49, 0.1);
+            border-radius: var(--radius);
+            color: var(--ink);
+            background: var(--white);
+            text-decoration: none;
+        }
+
+        .quick-route-list a:hover {
+            border-color: rgba(0, 109, 119, 0.38);
+            background: var(--mist);
+        }
+
+        .route-index {
+            display: inline-grid;
+            place-items: center;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--blue);
+            color: var(--white);
+            font-weight: 800;
+            font-size: 0.78rem;
+        }
+
+        .route-copy strong,
+        .route-copy span {
+            display: block;
+        }
+
+        .route-copy strong {
+            color: var(--blue);
+            line-height: 1.2;
+        }
+
+        .route-copy span {
+            color: var(--muted);
+            font-size: 0.86rem;
+            line-height: 1.35;
+        }
+
+        .hero-metrics {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(130px, 1fr));
+            gap: 12px;
+            margin-top: 50px;
+            max-width: 880px;
+        }
+
+        .metric {
+            border-radius: var(--radius);
+            border: 1px solid rgba(255, 255, 255, 0.24);
+            background: rgba(16, 35, 49, 0.36);
+            padding: 16px;
+        }
+
+        .metric strong {
+            display: block;
+            color: var(--amber);
+            font-size: 1.8rem;
+            line-height: 1;
+            margin-bottom: 7px;
+        }
+
+        .metric span {
+            color: rgba(255, 255, 255, 0.88);
+            font-size: 0.92rem;
+            font-weight: 600;
+        }
+
+        section {
+            padding: 80px 0;
+            scroll-margin-top: 96px;
+        }
+
+        section:nth-of-type(even) {
+            background: var(--white);
+        }
+
+        .section-header {
+            max-width: 760px;
+            margin-bottom: 34px;
+        }
+
+        .section-kicker {
+            margin: 0 0 8px;
+            color: var(--teal);
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 0.78rem;
+        }
+
+        h2 {
+            margin: 0 0 14px;
+            font-family: "Source Serif 4", Georgia, serif;
+            color: var(--blue);
+            font-size: 2.35rem;
+            line-height: 1.12;
+            letter-spacing: 0;
+        }
+
+        h3 {
+            margin: 0 0 10px;
+            color: var(--ink);
+            font-size: 1.2rem;
+            line-height: 1.3;
+            letter-spacing: 0;
+        }
+
+        p {
+            margin: 0 0 16px;
+            color: var(--ink-soft);
+        }
+
+        .lead {
+            font-size: 1.08rem;
+            color: var(--ink-soft);
+        }
+
+        .grid {
+            display: grid;
+            gap: 18px;
+        }
+
+        .grid.two {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .grid.three {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .grid.four {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
+        .card {
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            background: var(--white);
+            padding: 20px;
+            box-shadow: var(--shadow-soft);
+        }
+
+        section:nth-of-type(even) .card {
+            background: var(--paper);
+        }
+
+        .card.accent {
+            border-top: 4px solid var(--teal);
+        }
+
+        .card.amber {
+            border-top: 4px solid var(--amber);
+        }
+
+        .card.green {
+            border-top: 4px solid var(--green);
+        }
+
+        .card.blue {
+            border-top: 4px solid var(--blue);
+        }
+
+        .pill-list,
+        .plain-list,
+        .link-list,
+        .profession-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .pill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            min-height: 30px;
+            padding: 5px 10px;
+            border-radius: var(--radius);
+            background: rgba(0, 109, 119, 0.1);
+            color: var(--teal);
+            font-weight: 800;
+            font-size: 0.85rem;
+        }
+
+        .plain-list li,
+        .link-list li,
+        .profession-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(16, 35, 49, 0.1);
+        }
+
+        .plain-list li:last-child,
+        .link-list li:last-child,
+        .profession-list li:last-child {
+            border-bottom: 0;
+        }
+
+        .split {
+            display: grid;
+            grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+            gap: 32px;
+            align-items: start;
+        }
+
+        .media-frame {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            background: var(--white);
+            border: 1px solid var(--line);
+        }
+
+        .media-frame img {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+        }
+
+        .media-caption {
+            padding: 12px 14px;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .profession-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .catalog-control-panel {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto;
+            gap: 18px;
+            align-items: center;
+            margin: -8px 0 22px;
+            padding: 18px;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            background:
+                linear-gradient(90deg, rgba(237, 246, 245, 0.92), rgba(255, 255, 255, 0.96));
+            box-shadow: var(--shadow-soft);
+        }
+
+        .catalog-control-panel h3 {
+            margin-bottom: 4px;
+            color: var(--blue);
+        }
+
+        .catalog-control-panel p {
+            margin: 0;
+        }
+
+        .category-pills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 8px;
+        }
+
+        .category-pill {
+            display: inline-flex;
+            align-items: center;
+            min-height: 34px;
+            padding: 6px 10px;
+            border: 1px solid rgba(19, 60, 85, 0.14);
+            border-radius: var(--radius);
+            background: var(--white);
+            color: var(--blue);
+            font-weight: 800;
+            font-size: 0.84rem;
+        }
+
+        .profession-card {
+            min-height: 252px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 14px;
+            transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+        }
+
+        .profession-card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(0, 109, 119, 0.34);
+            box-shadow: var(--shadow);
+        }
+
+        .profession-card h3 {
+            min-height: 62px;
+            color: var(--blue);
+        }
+
+        .profession-card a {
+            align-self: flex-start;
+            font-weight: 800;
+        }
+
+        .profession-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin: 12px 0;
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 8px;
+            border-radius: 999px;
+            background: rgba(19, 60, 85, 0.08);
+            color: var(--blue);
+            font-size: 0.78rem;
+            font-weight: 800;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .news-card {
+            min-height: 180px;
+        }
+
+        .news-date {
+            display: inline-block;
+            margin-bottom: 10px;
+            color: var(--teal);
+            font-weight: 800;
+            font-size: 0.9rem;
+        }
+
+        .notice {
+            border-left: 4px solid var(--amber);
+            background: #fff7ed;
+            color: var(--ink);
+            padding: 16px 18px;
+            border-radius: var(--radius);
+        }
+
+        .contact-panel {
+            display: grid;
+            grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+            gap: 24px;
+        }
+
+        .contact-list {
+            display: grid;
+            gap: 12px;
+        }
+
+        .contact-row {
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 16px;
+            background: var(--white);
+        }
+
+        .contact-row strong {
+            display: block;
+            color: var(--blue);
+            margin-bottom: 4px;
+        }
+
+        .contact-action-grid {
+            display: grid;
+            gap: 10px;
+            margin-top: 18px;
+        }
+
+        .contact-action {
+            display: grid;
+            gap: 4px;
+            padding: 14px;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            background: var(--white);
+            color: var(--ink);
+            text-decoration: none;
+        }
+
+        .contact-action:hover {
+            border-color: rgba(0, 109, 119, 0.38);
+            background: var(--mist);
+        }
+
+        .contact-action strong {
+            color: var(--blue);
+            line-height: 1.25;
+        }
+
+        .contact-action span {
+            color: var(--muted);
+            font-size: 0.9rem;
+            line-height: 1.35;
+        }
+
+        .directory-toolbar {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            margin-bottom: 18px;
+        }
+
+        .directory-toolbar label {
+            font-weight: 800;
+            color: var(--blue);
+        }
+
+        .directory-toolbar input {
+            flex: 1;
+            min-height: 46px;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 10px 12px;
+            font: inherit;
+            background: var(--white);
+            color: var(--ink);
+        }
+
+        .directory-groups {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .directory-group h3 {
+            color: var(--blue);
+        }
+
+        .directory-link.hidden {
+            display: none;
+        }
+
+        .footer {
+            background: var(--ink);
+            color: var(--white);
+            padding: 54px 0 30px;
+        }
+
+        .footer p,
+        .footer li,
+        .footer a {
+            color: rgba(255, 255, 255, 0.78);
+        }
+
+        .footer a:hover {
+            color: var(--white);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.6fr 1fr 1fr;
+            gap: 28px;
+        }
+
+        .footer h2,
+        .footer h3 {
+            color: var(--white);
+            font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+            font-size: 1.15rem;
+        }
+
+        .footer-bottom {
+            margin-top: 28px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.18);
+            color: rgba(255, 255, 255, 0.66);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 1100px) {
+            .nav {
+                position: fixed;
+                inset: calc(var(--header-height) + 36px) 0 auto 0;
+                background: var(--paper);
+                border-bottom: 1px solid var(--line);
+                box-shadow: var(--shadow);
+                padding: 16px;
+                transform: translateY(calc(-100% - 180px));
+                opacity: 0;
+                pointer-events: none;
+                transition: transform 180ms ease, opacity 180ms ease;
+            }
+
+            .nav.active {
+                transform: translateY(0);
+                opacity: 1;
+                pointer-events: auto;
+            }
+
+            .nav-list {
+                width: min(100%, var(--container));
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 8px;
+            }
+
+            .nav-link {
+                background: var(--white);
+                border: 1px solid var(--line);
+            }
+
+            .menu-button {
+                display: inline-block;
+            }
+
+            .hero-metrics,
+            .grid.four,
+            .profession-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .hero-layout,
+            .catalog-control-panel {
+                grid-template-columns: 1fr;
+            }
+
+            .category-pills {
+                justify-content: flex-start;
+            }
+
+            .directory-groups {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 760px) {
+            .topbar .container {
+                display: block;
+            }
+
+            .topbar span,
+            .topbar a {
+                display: block;
+                margin: 3px 0;
+            }
+
+            .brand {
+                min-width: 0;
+            }
+
+            .brand-subtitle {
+                display: none;
+            }
+
+            .nav {
+                inset: calc(var(--header-height) + 64px) 0 auto 0;
+            }
+
+            .nav-list,
+            .hero-metrics,
+            .grid.two,
+            .grid.three,
+            .grid.four,
+            .split,
+            .profession-grid,
+            .news-grid,
+            .contact-panel,
+            .directory-groups,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 84px 0 48px;
+                background-position: 58% center;
+            }
+
+            .hero-layout,
+            .hero-content,
+            .quick-route-panel,
+            .hero-metrics {
+                max-width: min(100%, 358px);
+            }
+
+            .hero h1 {
+                font-size: 1.58rem;
+                line-height: 1.12;
+            }
+
+            .eyebrow {
+                display: block;
+                font-size: 0.82rem;
+            }
+
+            .quick-route-panel {
+                margin-top: 10px;
+            }
+
+            .hero-actions .button {
+                width: 100%;
+            }
+
+            h2 {
+                font-size: 1.9rem;
+            }
+
+            section {
+                padding: 58px 0;
+            }
+
+            .directory-toolbar {
+                display: block;
+            }
+
+            .directory-toolbar input {
+                width: 100%;
+                margin-top: 8px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                scroll-behavior: auto !important;
+                transition-duration: 0.01ms !important;
+            }
         }
     </style>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Перейти до основного контенту</a>
 
-    <a href="#main" class="skip-link">Перейти до основного вмісту</a>
+    <div class="topbar">
+        <div class="container">
+            <span>Код ЄДРПОУ: 36738974</span>
+            <span>79060, м. Львів, вул. Княгині Ольги, буд. 122</span>
+            <a href="https://alt.lcptodcz.lviv.ua/" target="_blank" rel="noopener">Версія для людей з порушеннями зору</a>
+            <a href="https://school.org.ua/rss/29791/" target="_blank" rel="noopener">RSS-Новини</a>
+        </div>
+    </div>
 
-    <header>
-        <div class="container nav-container">
-            <div class="logo">
-                <span style="font-size: 2rem;">🎓</span>
-                <span>ЛЦ ПТО ДСЗ</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">Головна</a></li>
-                <li><a href="#courses">Курси</a></li>
-                <li><a href="#about">Про центр</a></li>
-                <li><a href="#news">Новини</a></li>
-                <li><a href="#contacts">Контакти</a></li>
-            </ul>
-            <a href="#courses" class="btn btn-primary">Вступити</a>
+    <header class="header" id="siteHeader">
+        <div class="container header-row">
+            <a class="brand" href="#home" aria-label="ЛЦПТО ДСЗ">
+                <span class="brand-mark" aria-hidden="true">LC</span>
+                <span>
+                    <span class="brand-name">ЛЦПТО ДСЗ</span>
+                    <span class="brand-subtitle">Львівський центр професійно-технічної освіти</span>
+                </span>
+            </a>
+            <nav class="nav" id="siteNav" aria-label="Головна навігація">
+                <ul class="nav-list">
+                    <li><a class="nav-link active" href="#home">Головна</a></li>
+                    <li><a class="nav-link" href="#about">Про заклад</a></li>
+                    <li><a class="nav-link" href="#professions">Професії</a></li>
+                    <li><a class="nav-link" href="#services">Послуги</a></li>
+                    <li><a class="nav-link" href="#students">Слухачам</a></li>
+                    <li><a class="nav-link" href="#employers">Роботодавцям</a></li>
+                    <li><a class="nav-link" href="#news">Новини</a></li>
+                    <li><a class="nav-link" href="#contacts">Контакти</a></li>
+                    <li><a class="nav-link" href="#resources">Каталог</a></li>
+                </ul>
+            </nav>
+            <button class="menu-button" id="menuButton" type="button" aria-label="Відкрити меню" aria-expanded="false" aria-controls="siteNav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
-    <main id="main">
-        <section class="hero" id="home">
-            <div class="container hero-content">
-                <h1>Твій квиток у професійне майбутнє</h1>
-                <p>Львівський центр професійно-технічної освіти Державної служби зайнятості. Здобувай затребувані професії, підвищуй кваліфікацію та будуй кар'єру вже сьогодні!</p>
-                <div class="hero-buttons">
-                    <a href="#courses" class="btn btn-secondary">🚀 Обрати курс</a>
-                    <a href="#contacts" class="btn btn-outline">Отримати консультацію</a>
+    <main id="main-content">
+        <section class="hero" id="home" aria-labelledby="heroTitle">
+            <div class="container">
+                <div class="hero-layout">
+                    <div class="hero-content">
+                        <span class="eyebrow">Державний професійно-технічний навчальний заклад</span>
+                        <h1 id="heroTitle">Львівський центр професійно-технічної освіти державної служби зайнятості</h1>
+                        <p>Професійна підготовка, перепідготовка та підвищення кваліфікації дорослого населення за професіями, потрібними ринку праці, роботодавцям і людям, які планують новий кар'єрний крок.</p>
+                        <div class="hero-actions">
+                            <a class="button primary" href="#professions">Переглянути професії</a>
+                            <a class="button secondary" href="#contacts">Зв'язатися з центром</a>
+                        </div>
+                        <div class="hero-metrics" aria-label="Ключові дані центру">
+                            <div class="metric"><strong>17</strong><span>професійних сторінок у поточному каталозі</span></div>
+                            <div class="metric"><strong>19</strong><span>професій визнано атестованими МОН</span></div>
+                            <div class="metric"><strong>2026</strong><span>актуальні новини та графіки навчання</span></div>
+                            <div class="metric"><strong>79060</strong><span>поштовий індекс центру у Львові</span></div>
+                        </div>
+                    </div>
+                    <aside class="quick-route-panel" aria-labelledby="quickRouteTitle">
+                        <h2 id="quickRouteTitle">Швидко перейти до потрібного</h2>
+                        <ul class="quick-route-list">
+                            <li>
+                                <a data-quick-route="professions" href="#professions">
+                                    <span class="route-index">1</span>
+                                    <span class="route-copy"><strong>Обрати професію</strong><span>17 напрямів з короткими описами та посиланнями</span></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a data-quick-route="students" href="#students">
+                                    <span class="route-index">2</span>
+                                    <span class="route-copy"><strong>Знайти умови навчання</strong><span>Пільгові програми, практика, підтримка слухачів</span></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a data-quick-route="contacts" href="#contacts">
+                                    <span class="route-index">3</span>
+                                    <span class="route-copy"><strong>Зв'язатися з центром</strong><span>Телефони, пошта, адреса та карта проїзду</span></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </aside>
                 </div>
             </div>
         </section>
 
-        <section id="about">
+        <section id="about" aria-labelledby="aboutTitle">
+            <div class="container split">
+                <div>
+                    <div class="section-header">
+                        <p class="section-kicker">Про заклад</p>
+                        <h2 id="aboutTitle">Державний центр професійного навчання для дорослих</h2>
+                        <p class="lead">Львівський центр ПТО ДСЗ підпорядкований Державній службі зайнятості через Львівський обласний центр зайнятості і забезпечує соціальні послуги з професійної підготовки, перепідготовки та підвищення кваліфікації.</p>
+                    </div>
+                    <p>Центр навчає зареєстрованих безробітних за рахунок коштів Фонду загальнообов'язкового державного соціального страхування України на випадок безробіття. Професійне навчання осіб із числа зайнятого населення та інших безробітних може здійснюватися на платній основі відповідно до укладених договорів.</p>
+                    <p>Основне завдання центру - забезпечення професійного навчання за професіями та напрямами на замовлення роботодавця, для самозайнятості, провадження підприємницької діяльності, а також відповідно до поточної і перспективної потреби ринку праці.</p>
+                    <div class="grid two">
+                        <article class="card accent">
+                            <h3>Освітня діяльність</h3>
+                            <p>Підготовка, перепідготовка та підвищення кваліфікації у сфері професійної освіти з урахуванням вимог законодавства України.</p>
+                            <a href="https://registry.edbo.gov.ua/university/3067/professions/" target="_blank" rel="noopener">Дані в ЄДЕБО</a>
+                        </article>
+                        <article class="card amber">
+                            <h3>Атестація та акредитація</h3>
+                            <p>Центр визнано атестованим за професіями, а для підготовки водіїв трамваїв і тролейбусів отримано сертифікат державної акредитації МВС.</p>
+                            <a href="https://lcptodcz.lviv.ua/pro-zaklad-10-09-13-28-02-2019/" target="_blank" rel="noopener">Документи закладу</a>
+                        </article>
+                    </div>
+                </div>
+                <aside class="media-frame">
+                    <img src="https://rada.info/upload/users_files/36738974/slides/68249991_1214387252085476_594339584465174528_n.jpg" alt="Навчальні аудиторії Львівського центру ПТО ДСЗ">
+                    <div class="media-caption">Матеріально-технічна база та навчальне середовище центру.</div>
+                </aside>
+            </div>
+        </section>
+
+        <section id="professions" aria-labelledby="professionsTitle">
             <div class="container">
-                <h2 class="section-title">Чому обирають нас?</h2>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">🛠️</div>
-                        <h3>Сучасне обладнання</h3>
-                        <p>Навчання на новітній техніці, агродронах та 3D-принтерах завдяки міжнародним грантовим проєктам.</p>
+                <div class="section-header">
+                    <p class="section-kicker">Освітні послуги</p>
+                    <h2 id="professionsTitle">Повний перелік професійних сторінок з джерельного сайту</h2>
+                    <p class="lead">На базі центру здійснюється професійне навчання безробітних громадян для різних галузей економіки: сільське господарство, промисловість, енергетика, будівництво, торгівля, транспорт, сфера послуг, легка промисловість і цифрові навички.</p>
+                </div>
+                <div class="catalog-control-panel" aria-label="Огляд каталогу професій">
+                    <div>
+                        <h3>Каталог для швидкого сканування</h3>
+                        <p>Професії згруповано тегами, щоб абітурієнт або консультант служби зайнятості швидше знайшов потрібний напрям.</p>
                     </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">💼</div>
-                        <h3>Гарантія працевлаштування</h3>
-                        <p>Повна підтримка Державної служби зайнятості та співпраця з провідними роботодавцями регіону.</p>
+                    <div class="category-pills" aria-label="Основні напрями професій">
+                        <span class="category-pill" data-category-pill="industry">Промисловість</span>
+                        <span class="category-pill" data-category-pill="transport">Транспорт</span>
+                        <span class="category-pill" data-category-pill="trade">Торгівля</span>
+                        <span class="category-pill" data-category-pill="services">Послуги</span>
+                        <span class="category-pill" data-category-pill="digital">Цифрові навички</span>
                     </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🎓</div>
-                        <h3>Офіційні сертифікати</h3>
-                        <p>Документи державного зразка, що підтверджують вашу кваліфікацію в Україні та за кордоном.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🤝</div>
-                        <h3>Доступність для всіх</h3>
-                        <p>Безкоштовне навчання для безробітних, ВПО та ветеранів. Зручний графік занять.</p>
-                    </div>
+                </div>
+                <div class="profession-grid">
+                    <article class="card profession-card" data-profession-card="elektrogazozvarnik">
+                        <div><h3>Електрогазозварник</h3><p>Підготовка для переробної промисловості та виробничих підприємств.</p><div class="profession-meta"><span class="tag">промисловість</span><span class="tag">робітнича професія</span></div></div>
+                        <a href="https://lcptodcz.lviv.ua/elektrogazozvarnik-10-17-46-28-02-2019/" target="_blank" rel="noopener">Сторінка професії</a>
+                    </article>
+                    <article class="card profession-card" data-profession-card="montazhnyk">
+                        <div><h3>Монтажник санітарно-технічних систем і устаткування</h3><p>Професія для будівництва, монтажу та обслуговування інженерних систем.</p><div class="profession-meta"><span class="tag">будівництво</span></div></div>
+                        <a href="https://lcptodcz.lviv.ua/montazhnik-sanitarnotehnichnih-sistem-i-ustatkuvannya-10-17-59-28-02-2019/" target="_blank" rel="noopener">Сторінка професії</a>
+                    </article>
+                    <article class="card profession-card" data-profession-card="tram-driver">
+                        <div><h3>Водій трамвая</h3><p>Підготовка водіїв міського електротранспорту з державною акредитацією МВС.</p><div class="profession-meta"><span class="tag">транспорт</span><span class="tag">МВС</span></div></div>
+                        <a href="https://lcptodcz.lviv.ua/vodij-tramvaya-10-18-16-28-02-2019/" target="_blank" rel="noopener">Сторінка професії</a>
+                    </article>
+                    <article class="card profession-card" data-profession-card="trolley-driver">
+                        <div><h3>Водій тролейбуса</h3><p>Професійна підготовка для транспортної галузі та міських перевезень.</p><div class="profession-meta"><span class="tag">транспорт</span><span class="tag">МВС</span></div></div>
+                        <a href="https://lcptodcz.lviv.ua/vodij-trolejbusa-10-18-28-28-02-2019/" target="_blank" rel="noopener">Сторінка професії</a>
+                    </article>
+                    <article class="card profession-card" data-profession-card="cashier">
+                        <div><h3>Касир торговельного залу</h3><p>Підготовка для підприємств роздрібної торгівлі та сервісних точок продажу.</p><div class="profession-meta"><span class="tag">торгівля</span></div></div>
+                        <a href="https://lcptodcz.lviv.ua/kasir-torgovelnogo-zalu-10-18-41-28-02-2019/" target="_blank" rel="noopener">Сторінка професії</a>
+                    </article>
+                    <article class="card profession-card" data-profession-card="food-seller">
+                        <div><h3>Продавець продовольчих товарів</h3><p>Навчання для роботи з продовольчими товарами, клієнтським сервісом і торговельними процесами.</p><div class="profession-meta"><span class="tag">торгівля</span></div></div>
+                        <a href="https://lcptodcz.lviv.ua/prodavec-prodovolchih-tovariv-10-18-53-28-02-2019/" target="_blank" rel="noopener">Сторінка професії</a>
+                    </article>
+                    <article class="card profession-card" data-profession-card="nonfood-seller">
+                        <div><h3>Продавець непродовольчих товарів</h3><p>Підготовка персоналу для непродовольчої роздрібної торгівлі.</p><div class="profession-meta"><span class="tag">торгівля</span></div></div>
+                        <a href="https://lcptodcz.lviv.ua/prodavec-neprodovolchih-tovariv-10-19-06-28-02-2019/" target="_blank" rel="noopener">Сторінка професії</a>
+                    </article>
+                    <article class="card profession-card" data-profession-card="boiler-operator">
+                        <div><h3>Оператор котельні</h3><p>Підготовка для сфери постачання тепла, енергії та обслуговування котельного обладнання.</p><div class="profession-meta"><span class="tag">енергетика</span></div></div>
+                        <a href="https://lcptodcz.lviv.ua/operator-kotelni-10-19-16-28-02-2019/" target="_blank" rel="noopener">Сторінка професії</a>
+                    </article>
+                    <article class="card profession-card" data-profession-card="boiler-fireman">
+                        <div><h3>Машиніст (кочегар) котельні</h3><p>Кваліфікація для експлуатації котельного устаткування та теплотехнічних процесів.</p><div class="profession-meta"><span class="tag">енергетика</span></div></div>
+                        <a href="https://lcptodcz.lviv.ua/mashinist-kochegar-kotelni-10-19-28-28-02-2019/" target="_blank" rel="noopener">Сторінка професії</a>
+                    </article>
+                    <article class="card profession-card" data-profession-card="tractor-driver">
+                        <div><h3>Тракторист-машиніст сільськогосподарського виробництва</h3><p>Підготовка за категоріями для аграрного виробництва і сучасного сільського господарства.</p><div class="profession-meta"><span class="tag">сільське господарство</span></div></div>
+                        <a href="https://lcptodcz.lviv.ua/traktoristmashinist-silskogospodarskogo-virobnictva-10-19-40-28-02-2019/" target="_blank" rel="noopener">Сторінка професії</a>
+                    </article>
+                    <article class="card profession-card" data-profession-card="cable-fitter">
+                        <div><h3>Монтер кабельного виробництва</h3><p>Професія для переробної промисловості та кабельного виробництва.</p><div class="profession-meta"><span class="tag">промисловість</span></div></div>
+                        <a href="https://lcptodcz.lviv.ua/monter-kabelnogo-virobnictva-10-19-51-28-02-2019/" target="_blank" rel="noopener">Сторінка професії</a>
+                    </article>
+                    <article class="card profession-card" data-profession-card="hairdresser">
+                        <div><h3>Перукар (перукар-модельєр)</h3><p>Підготовка для сфери послуг, догляду за волоссям і перукарського сервісу.</p><div class="profession-meta"><span class="tag">послуги</span></div></div>
+                        <a href="https://lcptodcz.lviv.ua/perukar-perukarmodeler-10-20-03-28-02-2019/" target="_blank" rel="noopener">Сторінка професії</a>
+                    </article>
+                    <article class="card profession-card" data-profession-card="manicurist">
+                        <div><h3>Манікюрник</h3><p>Підготовка для індустрії краси та надання послуг з догляду за нігтями.</p><div class="profession-meta"><span class="tag">послуги</span></div></div>
+                        <a href="https://lcptodcz.lviv.ua/manikjurnik-10-20-18-28-02-2019/" target="_blank" rel="noopener">Сторінка професії</a>
+                    </article>
+                    <article class="card profession-card" data-profession-card="makeup-artist">
+                        <div><h3>Візажист</h3><p>Навчання для професійної роботи у сфері краси, макіяжу та клієнтського сервісу.</p><div class="profession-meta"><span class="tag">послуги</span></div></div>
+                        <a href="https://lcptodcz.lviv.ua/vizazhist-10-20-30-28-02-2019/" target="_blank" rel="noopener">Сторінка професії</a>
+                    </article>
+                    <article class="card profession-card" data-profession-card="farmer">
+                        <div><h3>Фермер</h3><p>Підготовка для самозайнятості, агробізнесу та розвитку фермерських господарств.</p><div class="profession-meta"><span class="tag">агро</span><span class="tag">самозайнятість</span></div></div>
+                        <a href="https://lcptodcz.lviv.ua/fermer-10-20-41-28-02-2019/" target="_blank" rel="noopener">Сторінка професії</a>
+                    </article>
+                    <article class="card profession-card" data-profession-card="seamstress">
+                        <div><h3>Швачка</h3><p>Професія легкої промисловості, крою, пошиття та виготовлення виробів.</p><div class="profession-meta"><span class="tag">легка промисловість</span></div></div>
+                        <a href="https://lcptodcz.lviv.ua/shvachka-14-49-31-11-10-2024/" target="_blank" rel="noopener">Сторінка професії</a>
+                    </article>
+                    <article class="card profession-card" data-profession-card="software-operator">
+                        <div><h3>Оператор з обробки інформації та програмного забезпечення</h3><p>Ліцензована професія для роботи з інформаційними системами та програмним забезпеченням.</p><div class="profession-meta"><span class="tag">цифрові навички</span></div></div>
+                        <a href="https://lcptodcz.lviv.ua/operator-z-obrobki%C2%A0%C2%A0%C2%A0informacii%C2%A0ta-programnogo-zabezpechennya-10-41-58-31-07-2020/" target="_blank" rel="noopener">Сторінка професії</a>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section id="courses" style="background: #fff;">
+        <section id="services" aria-labelledby="servicesTitle">
             <div class="container">
-                <h2 class="section-title">Популярні напрямки навчання</h2>
-                <div class="courses-grid">
-                    <div class="course-card">
-                        <div class="course-img" style="background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800');">
-                            <span class="course-tag">IT СФЕРА</span>
-                        </div>
-                        <div class="course-content">
-                            <h3>Тестувальник ПЗ (QA)</h3>
-                            <p>Опануйте затребувану IT-професію. Manual та автоматизоване тестування, робота з баг-трекінгом та сучасними інструментами.</p>
-                            <a href="#" class="read-more">Детальніше про курс →</a>
-                        </div>
-                    </div>
-                    <div class="course-card">
-                        <div class="course-img" style="background-image: url('https://images.unsplash.com/photo-1585435557343-3b092031a831?auto=format&fit=crop&q=80&w=800');">
-                            <span class="course-tag">АГРО-ТЕХ</span>
-                        </div>
-                        <div class="course-content">
-                            <h3>Оператор агродронів</h3>
-                            <p>Знання, що рятують врожай! Навчіться керувати БПЛА для моніторингу полів, оцифрування та точного внесення добрив.</p>
-                            <a href="#" class="read-more">Детальніше про курс →</a>
-                        </div>
-                    </div>
-                    <div class="course-card">
-                        <div class="course-img" style="background-image: url('https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&q=80&w=800');">
-                            <span class="course-tag">ДИЗАЙН & TECH</span>
-                        </div>
-                        <div class="course-content">
-                            <h3>Цифровий крій та 3D-друк</h3>
-                            <p>Поєднання легкої промисловості та інновацій. Створюйте адаптивний одяг та використовуйте 3D-моделювання у дизайні.</p>
-                            <a href="#" class="read-more">Детальніше про курс →</a>
-                        </div>
-                    </div>
+                <div class="section-header">
+                    <p class="section-kicker">Навчання та сервіси</p>
+                    <h2 id="servicesTitle">Освітні послуги, графіки та формати навчання</h2>
+                    <p class="lead">Центр поєднує професійну підготовку, короткі курси цільового призначення, дуальне і дистанційне навчання, виробничу практику та співпрацю з роботодавцями.</p>
+                </div>
+                <div class="grid four">
+                    <article class="card accent">
+                        <h3>Реєстр програм підвищення кваліфікації</h3>
+                        <p>Актуальний реєстр освітніх програм підвищення кваліфікації Львівського ЦПТО ДСЗ на 2025 рік.</p>
+                        <a href="https://lcptodcz.lviv.ua/napryami-kursiv-cilovogo-priznachennya-10-20-55-28-02-2019/" target="_blank" rel="noopener">Відкрити реєстр</a>
+                    </article>
+                    <article class="card amber">
+                        <h3>Графік формування груп</h3>
+                        <p>Графік формування навчальних груп на 2025 рік і окремий графік на травень 2026 року.</p>
+                        <a href="https://lcptodcz.lviv.ua/grafik-formuvannya-grup-na-berezenkviten-10-21-14-28-02-2019/" target="_blank" rel="noopener">Графік на травень 2026</a>
+                    </article>
+                    <article class="card green">
+                        <h3>Школа фермерства</h3>
+                        <p>Освітній напрям для людей, які розвивають фермерство, аграрні навички та власну справу.</p>
+                        <a href="https://lcptodcz.lviv.ua/shkola-fermerstva-10-31-22-19-04-2021/" target="_blank" rel="noopener">Перейти до напряму</a>
+                    </article>
+                    <article class="card blue">
+                        <h3>Кваліфікаційний центр</h3>
+                        <p>Окремий напрям підтвердження професійних кваліфікацій і розвитку сучасних компетентностей.</p>
+                        <a href="https://lcptodcz.lviv.ua/kvalifikacijnij-centr-14-40-39-12-02-2026/" target="_blank" rel="noopener">Кваліфікаційний центр</a>
+                    </article>
+                </div>
+                <div class="grid three" style="margin-top:18px">
+                    <article class="card">
+                        <h3>Дуальне навчання</h3>
+                        <p>Навчання, що поєднує освітній процес із практичною підготовкою у взаємодії з роботодавцями.</p>
+                        <a href="https://lcptodcz.lviv.ua/dualne-navchannya-10-21-35-28-02-2019/" target="_blank" rel="noopener">Докладніше</a>
+                    </article>
+                    <article class="card">
+                        <h3>Дистанційне навчання</h3>
+                        <p>Формати дистанційного опанування матеріалів і підтримки слухачів.</p>
+                        <a href="https://lcptodcz.lviv.ua/distancijne-navchannya-10-23-35-28-02-2019/" target="_blank" rel="noopener">Докладніше</a>
+                    </article>
+                    <article class="card">
+                        <h3>Платні послуги</h3>
+                        <p>Навчання на платній основі відповідно до укладених договорів для окремих категорій слухачів.</p>
+                        <a href="https://lcptodcz.lviv.ua/platni-poslugi-10-23-51-28-02-2019/" target="_blank" rel="noopener">Переглянути умови</a>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section id="news">
+        <section id="students" aria-labelledby="studentsTitle">
+            <div class="container split">
+                <div>
+                    <div class="section-header">
+                        <p class="section-kicker">Слухачам</p>
+                        <h2 id="studentsTitle">Прийом, навчання, практика і підтримка</h2>
+                        <p class="lead">У розділі для слухачів зібрані правила прийому, схема доїзду, документи про закінчення, виробнича практика, соціальний захист, працевлаштування і психологічна консультація.</p>
+                    </div>
+                    <ul class="link-list">
+                        <li><a href="https://lcptodcz.lviv.ua/pravila-prijomu-do-cpto-10-24-24-28-02-2019/" target="_blank" rel="noopener">Правила прийому до ЦПТО</a></li>
+                        <li><a href="https://lcptodcz.lviv.ua/dokument-pro-zakinchennya-10-24-34-28-02-2019/" target="_blank" rel="noopener">Документ про закінчення навчання</a></li>
+                        <li><a href="https://lcptodcz.lviv.ua/virobnicha-praktika-10-24-43-28-02-2019/" target="_blank" rel="noopener">Виробнича практика</a></li>
+                        <li><a href="https://lcptodcz.lviv.ua/socialnij-zahist-sluhachiv-10-24-54-28-02-2019/" target="_blank" rel="noopener">Соціальний захист слухачів</a></li>
+                        <li><a href="https://lcptodcz.lviv.ua/pracevlashtuvannya-10-25-14-28-02-2019/" target="_blank" rel="noopener">Працевлаштування</a></li>
+                        <li><a href="https://lcptodcz.lviv.ua/psihologichna-konsultaciya-10-25-24-28-02-2019/" target="_blank" rel="noopener">Психологічна консультація</a></li>
+                        <li><a href="https://lcptodcz.lviv.ua/vhidne-testuvannya-13-58-13-26-03-2021/" target="_blank" rel="noopener">Вхідне тестування</a></li>
+                    </ul>
+                </div>
+                <div class="grid">
+                    <article class="card accent">
+                        <h3>Для учасників бойових дій</h3>
+                        <p>Окремий розділ з інформацією для учасників бойових дій щодо можливостей навчання та підтримки.</p>
+                        <a href="https://lcptodcz.lviv.ua/dlya-uchasnikiv-bojovih-dij-16-12-30-13-01-2025/" target="_blank" rel="noopener">Переглянути розділ</a>
+                    </article>
+                    <article class="card green">
+                        <h3>Для осіб з інвалідністю</h3>
+                        <p>Інформація про доступність, можливості навчання і супровід для осіб з інвалідністю.</p>
+                        <a href="https://lcptodcz.lviv.ua/dlya-osib-z-invalidnistju-12-13-53-03-03-2021/" target="_blank" rel="noopener">Переглянути розділ</a>
+                    </article>
+                    <article class="card amber">
+                        <h3>Антибулінгова програма</h3>
+                        <p>Антибулінгова програма у Львівському центрі професійно-технічної освіти державної служби зайнятості.</p>
+                        <a href="https://lcptodcz.lviv.ua/antibulingova-programa-u-lvivskomu-centri-pto-dsz-14-07-13-07-11-2024/" target="_blank" rel="noopener">Відкрити програму</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="employers" aria-labelledby="employersTitle">
             <div class="container">
-                <h2 class="section-title">Останні новини</h2>
+                <div class="section-header">
+                    <p class="section-kicker">Роботодавцям</p>
+                    <h2 id="employersTitle">Підготовка кадрів на замовлення бізнесу</h2>
+                    <p class="lead">На замовлення роботодавців центр готує кваліфікованих робітників, підвищує кваліфікацію персоналу, допомагає підібрати потенційних працівників під час іспитів і організувати практику слухачів на виробництві.</p>
+                </div>
+                <div class="grid three">
+                    <article class="card accent">
+                        <h3>Графік формування груп</h3>
+                        <p>Інформація для планування навчання під потреби підприємств.</p>
+                        <a href="https://lcptodcz.lviv.ua/grafik-formuvannya-grup-10-26-13-28-02-2019/" target="_blank" rel="noopener">Відкрити графік</a>
+                    </article>
+                    <article class="card amber">
+                        <h3>Графік практики</h3>
+                        <p>Організація виробничої практики слухачів у роботодавців.</p>
+                        <a href="https://lcptodcz.lviv.ua/grafik-praktiki-10-26-22-28-02-2019/" target="_blank" rel="noopener">Відкрити графік</a>
+                    </article>
+                    <article class="card green">
+                        <h3>Графік іспитів</h3>
+                        <p>Можливість оцінити кандидатів під час підсумкового контролю.</p>
+                        <a href="https://lcptodcz.lviv.ua/grafik-provedennya-ispitiv-10-26-31-28-02-2019/" target="_blank" rel="noopener">Відкрити графік</a>
+                    </article>
+                </div>
+                <div class="notice" style="margin-top:18px">
+                    <strong>Дія.Бізнес:</strong> на сайті джерела також зібрані посилання для внесення змін про ФОП, створення бізнесу, допомоги по безробіттю, відкриття та закриття ФОП, а також анкетування роботодавців.
+                </div>
+            </div>
+        </section>
+
+        <section id="news" aria-labelledby="newsTitle">
+            <div class="container">
+                <div class="section-header">
+                    <p class="section-kicker">Новини</p>
+                    <h2 id="newsTitle">Актуальні повідомлення з джерельного сайту</h2>
+                    <p class="lead">Останні новини перенесено з розділу новин джерела станом на травень 2026 року.</p>
+                </div>
                 <div class="news-grid">
-                    <div class="news-card">
-                        <div class="news-date">📅 13 Травня 2026</div>
-                        <h4>Перша група успішно завершила навчання з використання агродронів!</h4>
-                        <p>Наші випускники готові до роботи в сільському господарстві з використанням безпілотних літальних апаратів.</p>
-                        <a href="#" class="read-more">Читати новину →</a>
+                    <article class="card news-card">
+                        <span class="news-date">13:41 13.05.2026</span>
+                        <h3>Знання, що рятують життя!</h3>
+                        <p>Повідомлення про навчання та практичні знання, важливі для безпеки і допомоги людям.</p>
+                        <a href="https://lcptodcz.lviv.ua/news/13-41-22-13-05-2026/" target="_blank" rel="noopener">Читати новину</a>
+                    </article>
+                    <article class="card news-card">
+                        <span class="news-date">10:50 11.05.2026</span>
+                        <h3>Перша у цьому році група успішно завершила навчання з використання агродронів у сільському господарстві</h3>
+                        <p>Новий практичний напрям для аграрного сектору та цифрових технологій у полі.</p>
+                        <a href="https://lcptodcz.lviv.ua/news/10-50-13-11-05-2026/" target="_blank" rel="noopener">Читати новину</a>
+                    </article>
+                    <article class="card news-card">
+                        <span class="news-date">10:27 11.05.2026</span>
+                        <h3>Знання, що рятують життя!</h3>
+                        <p>Ще одне повідомлення центру про практичні знання та безпеку.</p>
+                        <a href="https://lcptodcz.lviv.ua/news/10-27-03-11-05-2026/" target="_blank" rel="noopener">Читати новину</a>
+                    </article>
+                    <article class="card news-card">
+                        <span class="news-date">15:37 04.05.2026</span>
+                        <h3>До уваги осіб, які бажають розпочати або розширити свій бізнес!</h3>
+                        <p>Інформація для людей, які планують підприємницьку діяльність або масштабування власної справи.</p>
+                        <a href="https://lcptodcz.lviv.ua/news/16-12-34-08-02-2023/" target="_blank" rel="noopener">Читати новину</a>
+                    </article>
+                    <article class="card news-card">
+                        <span class="news-date">13:37 04.05.2026</span>
+                        <h3>ПЕРША ГРУПА В ПРОЄКТІ REMARKET РОЗПОЧАЛА НАВЧАННЯ У ЛЬВІВСЬКОМУ ЦЕНТРІ ПТО ДСЗ</h3>
+                        <p>Повідомлення про старт навчання в межах проєкту REMARKET.</p>
+                        <a href="https://lcptodcz.lviv.ua/news/13-37-51-04-05-2026/" target="_blank" rel="noopener">Читати новину</a>
+                    </article>
+                    <article class="card news-card">
+                        <span class="news-date">11:37 22.04.2026</span>
+                        <h3>Курс «Тестувальник програмного забезпечення» у Львові</h3>
+                        <p>Анонс навчального курсу для входу в ІТ-напрям через тестування програмного забезпечення.</p>
+                        <a href="https://lcptodcz.lviv.ua/news/11-37-57-22-04-2026/" target="_blank" rel="noopener">Читати новину</a>
+                    </article>
+                    <article class="card news-card">
+                        <span class="news-date">12:31 20.04.2026</span>
+                        <h3>Більше, ніж просто політ: оцифруйте свій врожай за 5 днів</h3>
+                        <p>Короткий курс з агротехнологій і використання дронів у сільському господарстві.</p>
+                        <a href="https://lcptodcz.lviv.ua/news/12-31-47-20-04-2026/" target="_blank" rel="noopener">Читати новину</a>
+                    </article>
+                    <article class="card news-card">
+                        <span class="news-date">13:00 27.03.2026</span>
+                        <h3>Інвестиції у професійну освіту мають довгострокову цінність</h3>
+                        <p>Проєкт Skills4Recovery, цифровий крій, 3D-друк в одязі та сталість результатів модернізації професійної освіти.</p>
+                        <a href="https://lcptodcz.lviv.ua/news/13-00-54-27-03-2026/" target="_blank" rel="noopener">Читати новину</a>
+                    </article>
+                </div>
+                <div class="section-actions" style="margin-top:18px">
+                    <a class="button light" href="https://lcptodcz.lviv.ua/news/" target="_blank" rel="noopener">Усі новини джерела</a>
+                    <a class="button light" href="https://lcptodcz.lviv.ua/news/?p=53" target="_blank" rel="noopener">Архів новин</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacts" aria-labelledby="contactsTitle">
+            <div class="container">
+                <div class="section-header">
+                    <p class="section-kicker">Контакти</p>
+                    <h2 id="contactsTitle">Офіційні контактні дані центру</h2>
+                    <p class="lead">Контакти оновлено за джерельним сайтом Львівського центру ПТО ДСЗ.</p>
+                </div>
+                <div class="contact-panel">
+                    <div class="contact-list">
+                        <div class="contact-row"><strong>Адреса</strong>Львівська обл., м. Львів, Франківський р-н, вул. Княгині Ольги, буд. 122</div>
+                        <div class="contact-row"><strong>Поштовий індекс</strong>79060</div>
+                        <div class="contact-row"><strong>E-Mail адреса</strong><a href="mailto:profc@locz.gov.ua">profc@locz.gov.ua</a></div>
+                        <div class="contact-row"><strong>Приймальна</strong><a href="tel:+380322322262">(032) 232-22-62</a></div>
+                        <div class="contact-row"><strong>Методисти</strong><a href="tel:+380322441330">(032) 244-13-30</a>; <a href="tel:+380676720852">(067) 672-08-52</a></div>
+                        <div class="contact-row"><strong>Бухгалтерія</strong><a href="tel:+380322441331">(032) 244-13-31</a></div>
+                        <div class="contact-row"><strong>Керівник установи</strong>Плахотнюк Зоряна Іванівна</div>
                     </div>
-                    <div class="news-card">
-                        <div class="news-date">📅 04 Травня 2026</div>
-                        <h4>Старт проєкту REMARKET: навчання для бізнесу</h4>
-                        <p>Перша група розпочала навчання для тих, хто бажає розпочати або розширити свій власний бізнес в умовах сьогодення.</p>
-                        <a href="#" class="read-more">Читати новину →</a>
-                    </div>
-                    <div class="news-card">
-                        <div class="news-date">📅 27 Березня 2026</div>
-                        <h4>Інвестиції у професійну освіту мають довгострокову цінність</h4>
-                        <p>Результати проєкту «SKILLS FACTORY» продовжують масштабуватися поза межами грантової підтримки ЄС.</p>
-                        <a href="#" class="read-more">Читати новину →</a>
+                    <div class="card blue">
+                        <h3>Швидкий зв'язок</h3>
+                        <p>Для консультації щодо навчання, графіків формування груп, практики або співпраці з роботодавцями звертайтеся телефоном чи електронною поштою.</p>
+                        <div class="contact-action-grid">
+                            <a class="contact-action" href="mailto:profc@locz.gov.ua?subject=%D0%97%D0%B0%D0%BF%D0%B8%D1%82%20%D0%BF%D1%80%D0%BE%20%D0%BD%D0%B0%D0%B2%D1%87%D0%B0%D0%BD%D0%BD%D1%8F">
+                                <strong>Запитати про навчання</strong>
+                                <span>profc@locz.gov.ua</span>
+                            </a>
+                            <a class="contact-action" href="tel:+380322322262">
+                                <strong>Подзвонити у приймальну</strong>
+                                <span>(032) 232-22-62</span>
+                            </a>
+                            <a class="contact-action" href="https://goo.gl/maps/zstjAYaHP922" target="_blank" rel="noopener">
+                                <strong>Побудувати маршрут</strong>
+                                <span>Google Maps, вул. Княгині Ольги, 122</span>
+                            </a>
+                            <a class="contact-action" href="https://lcptodcz.lviv.ua/feedback/" target="_blank" rel="noopener">
+                                <strong>Залишити звернення</strong>
+                                <span>Форма зворотного зв'язку джерельного сайту</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <div class="partners-section">
+        <section id="resources" aria-labelledby="resourcesTitle">
             <div class="container">
-                <p style="margin-bottom: 30px; font-weight: 600; color: var(--gray); text-transform: uppercase; letter-spacing: 1px;">Реалізуємо проєкти за підтримки:</p>
-                <div class="partners-grid">
-                    <div class="partner-logo">🇪🇺 Європейський Союз</div>
-                    <div class="partner-logo">GIZ Ukraine</div>
-                    <div class="partner-logo">Solidarity Fund PL</div>
-                    <div class="partner-logo">Skills4Recovery</div>
+                <div class="section-header">
+                    <p class="section-kicker">Каталог</p>
+                    <h2 id="resourcesTitle">Повний каталог перенесених розділів</h2>
+                    <p class="lead">Каталог зібрано з карти джерельного сайту: від основних розділів і професій до документів, презентацій, фотогалереї, відгуків та архіву новин.</p>
+                </div>
+                <div class="directory-toolbar">
+                    <label for="sourceSearch">Пошук у каталозі</label>
+                    <input id="sourceSearch" type="search" aria-controls="sourceDirectory" placeholder="Наприклад: графік, професія, роботодавцям">
+                </div>
+                <div class="directory-groups" id="sourceDirectory">
+                    <article class="card directory-group">
+                        <h3>Про заклад</h3>
+                        <ul class="link-list">
+                            <li class="directory-link"><a data-source-page="main" href="https://lcptodcz.lviv.ua/main" target="_blank" rel="noopener">Головна</a></li>
+                            <li class="directory-link"><a data-source-page="about" href="https://lcptodcz.lviv.ua/pro-zaklad-10-09-13-28-02-2019" target="_blank" rel="noopener">Про заклад</a></li>
+                            <li class="directory-link"><a data-source-page="history" href="https://lcptodcz.lviv.ua/istoriya-lcpto-dsz-10-09-27-28-02-2019" target="_blank" rel="noopener">Історія ЛЦПТО ДСЗ</a></li>
+                            <li class="directory-link"><a data-source-page="staff" href="https://lcptodcz.lviv.ua/administraciya-10-09-37-28-02-2019" target="_blank" rel="noopener">Кадрове забезпечення</a></li>
+                            <li class="directory-link"><a data-source-page="base" href="https://lcptodcz.lviv.ua/materialnotehnichna-baza-10-09-49-28-02-2019" target="_blank" rel="noopener">Матеріально-технічна база</a></li>
+                            <li class="directory-link"><a data-source-page="methodical" href="https://lcptodcz.lviv.ua/kadrove-ta-navchalnometodichne-zabezpechennya-10-10-00-28-02-2019" target="_blank" rel="noopener">Навчально-методичне забезпечення</a></li>
+                            <li class="directory-link"><a data-source-page="vacancies" href="https://lcptodcz.lviv.ua/vakansii-lvivskogo-centru-pto-dsz-11-35-31-14-10-2024" target="_blank" rel="noopener">Вакансії Львівського центру ПТО ДСЗ</a></li>
+                            <li class="directory-link"><a data-source-page="contacts" href="https://lcptodcz.lviv.ua/kontakti-10-10-21-28-02-2019" target="_blank" rel="noopener">Контакти</a></li>
+                            <li class="directory-link"><a data-source-page="public-info" href="https://lcptodcz.lviv.ua/pro-dostup-do-publichnoi-informacii-14-47-15-04-09-2025" target="_blank" rel="noopener">Про доступ до публічної інформації</a></li>
+                            <li class="directory-link"><a data-source-page="finance" href="https://lcptodcz.lviv.ua/finansova-diyalnist-centru-11-41-57-03-02-2023" target="_blank" rel="noopener">Фінансова діяльність Центру</a></li>
+                            <li class="directory-link"><a data-source-page="logos" href="https://lcptodcz.lviv.ua/logotip-centru-17-11-09-13-03-2019" target="_blank" rel="noopener">Логотипи ДЦЗ та Львівського центру ПТО ДСЗ</a></li>
+                            <li class="directory-link"><a data-source-page="qualified-center" href="https://lcptodcz.lviv.ua/kvalifikacijnij-centr-14-40-39-12-02-2026" target="_blank" rel="noopener">Кваліфікаційний центр</a></li>
+                        </ul>
+                    </article>
+                    <article class="card directory-group">
+                        <h3>Професії</h3>
+                        <ul class="link-list">
+                            <li class="directory-link"><a data-source-page="professions" href="https://lcptodcz.lviv.ua/perelik-profesij-10-17-32-28-02-2019" target="_blank" rel="noopener">Перелік професій</a></li>
+                            <li class="directory-link"><a data-source-page="electrogas-welder" href="https://lcptodcz.lviv.ua/elektrogazozvarnik-10-17-46-28-02-2019" target="_blank" rel="noopener">Електрогазозварник</a></li>
+                            <li class="directory-link"><a data-source-page="sanitary-systems" href="https://lcptodcz.lviv.ua/montazhnik-sanitarnotehnichnih-sistem-i-ustatkuvannya-10-17-59-28-02-2019" target="_blank" rel="noopener">Монтажник санітарно-технічних систем і устаткування</a></li>
+                            <li class="directory-link"><a data-source-page="tram-driver" href="https://lcptodcz.lviv.ua/vodij-tramvaya-10-18-16-28-02-2019" target="_blank" rel="noopener">Водій трамвая</a></li>
+                            <li class="directory-link"><a data-source-page="trolley-driver" href="https://lcptodcz.lviv.ua/vodij-trolejbusa-10-18-28-28-02-2019" target="_blank" rel="noopener">Водій тролейбуса</a></li>
+                            <li class="directory-link"><a data-source-page="cashier" href="https://lcptodcz.lviv.ua/kasir-torgovelnogo-zalu-10-18-41-28-02-2019" target="_blank" rel="noopener">Касир торговельного залу</a></li>
+                            <li class="directory-link"><a data-source-page="food-seller" href="https://lcptodcz.lviv.ua/prodavec-prodovolchih-tovariv-10-18-53-28-02-2019" target="_blank" rel="noopener">Продавець продовольчих товарів</a></li>
+                            <li class="directory-link"><a data-source-page="nonfood-seller" href="https://lcptodcz.lviv.ua/prodavec-neprodovolchih-tovariv-10-19-06-28-02-2019" target="_blank" rel="noopener">Продавець непродовольчих товарів</a></li>
+                            <li class="directory-link"><a data-source-page="boiler-operator" href="https://lcptodcz.lviv.ua/operator-kotelni-10-19-16-28-02-2019" target="_blank" rel="noopener">Оператор котельні</a></li>
+                            <li class="directory-link"><a data-source-page="boiler-fireman" href="https://lcptodcz.lviv.ua/mashinist-kochegar-kotelni-10-19-28-28-02-2019" target="_blank" rel="noopener">Машиніст (кочегар) котельні</a></li>
+                            <li class="directory-link"><a data-source-page="tractor-driver" href="https://lcptodcz.lviv.ua/traktoristmashinist-silskogospodarskogo-virobnictva-10-19-40-28-02-2019" target="_blank" rel="noopener">Тракторист-машиніст сільськогосподарського виробництва</a></li>
+                            <li class="directory-link"><a data-source-page="cable-fitter" href="https://lcptodcz.lviv.ua/monter-kabelnogo-virobnictva-10-19-51-28-02-2019" target="_blank" rel="noopener">Монтер кабельного виробництва</a></li>
+                            <li class="directory-link"><a data-source-page="hairdresser" href="https://lcptodcz.lviv.ua/perukar-perukarmodeler-10-20-03-28-02-2019" target="_blank" rel="noopener">Перукар (перукар-модельєр)</a></li>
+                            <li class="directory-link"><a data-source-page="manicurist" href="https://lcptodcz.lviv.ua/manikjurnik-10-20-18-28-02-2019" target="_blank" rel="noopener">Манікюрник</a></li>
+                            <li class="directory-link"><a data-source-page="makeup-artist" href="https://lcptodcz.lviv.ua/vizazhist-10-20-30-28-02-2019" target="_blank" rel="noopener">Візажист</a></li>
+                            <li class="directory-link"><a data-source-page="farmer" href="https://lcptodcz.lviv.ua/fermer-10-20-41-28-02-2019" target="_blank" rel="noopener">Фермер</a></li>
+                            <li class="directory-link"><a data-source-page="seamstress" href="https://lcptodcz.lviv.ua/shvachka-14-49-31-11-10-2024" target="_blank" rel="noopener">Швачка</a></li>
+                            <li class="directory-link"><a data-source-page="software-operator" href="https://lcptodcz.lviv.ua/operator-z-obrobki%C2%A0%C2%A0%C2%A0informacii%C2%A0ta-programnogo-zabezpechennya-10-41-58-31-07-2020" target="_blank" rel="noopener">Оператор з обробки інформації та програмного забезпечення</a></li>
+                        </ul>
+                    </article>
+                    <article class="card directory-group">
+                        <h3>Освітні послуги</h3>
+                        <ul class="link-list">
+                            <li class="directory-link"><a data-source-page="education-services" href="https://lcptodcz.lviv.ua/osvitni-poslugi-10-17-18-28-02-2019" target="_blank" rel="noopener">Освітні послуги</a></li>
+                            <li class="directory-link"><a data-source-page="program-register-2025" href="https://lcptodcz.lviv.ua/napryami-kursiv-cilovogo-priznachennya-10-20-55-28-02-2019" target="_blank" rel="noopener">Реєстр освітніх програм підвищення кваліфікації на 2025 рік</a></li>
+                            <li class="directory-link"><a data-source-page="groups-2025" href="https://lcptodcz.lviv.ua/grafik-formuvannya-grup-na-2019-rik-10-21-04-28-02-2019" target="_blank" rel="noopener">Графік формування груп на 2025 рік</a></li>
+                            <li class="directory-link"><a data-source-page="groups-may-2026" href="https://lcptodcz.lviv.ua/grafik-formuvannya-grup-na-berezenkviten-10-21-14-28-02-2019" target="_blank" rel="noopener">Графік формування груп на травень 2026 року</a></li>
+                            <li class="directory-link"><a data-source-page="farm-school" href="https://lcptodcz.lviv.ua/shkola-fermerstva-10-31-22-19-04-2021" target="_blank" rel="noopener">ШКОЛА ФЕРМЕРСТВА</a></li>
+                            <li class="directory-link"><a data-source-page="training-process" href="https://lcptodcz.lviv.ua/organizaciya-navchalnovirobnichogo-procesu-12-48-46-21-01-2021" target="_blank" rel="noopener">Організація навчально-виробничого процесу</a></li>
+                            <li class="directory-link"><a data-source-page="quality-monitoring" href="https://lcptodcz.lviv.ua/monitoring-yakosti-profesijnogo-navchannya-17-14-48-24-03-2021" target="_blank" rel="noopener">Моніторинг якості професійного навчання</a></li>
+                            <li class="directory-link"><a data-source-page="dual-education" href="https://lcptodcz.lviv.ua/dualne-navchannya-10-21-35-28-02-2019" target="_blank" rel="noopener">Дуальне навчання</a></li>
+                            <li class="directory-link"><a data-source-page="remote-education" href="https://lcptodcz.lviv.ua/distancijne-navchannya-10-23-35-28-02-2019" target="_blank" rel="noopener">Дистанційне навчання</a></li>
+                            <li class="directory-link"><a data-source-page="paid-services" href="https://lcptodcz.lviv.ua/platni-poslugi-10-23-51-28-02-2019" target="_blank" rel="noopener">Платні послуги</a></li>
+                        </ul>
+                    </article>
+                    <article class="card directory-group">
+                        <h3>Слухачам</h3>
+                        <ul class="link-list">
+                            <li class="directory-link"><a data-source-page="students" href="https://lcptodcz.lviv.ua/sluhacham-10-24-04-28-02-2019" target="_blank" rel="noopener">Слухачам</a></li>
+                            <li class="directory-link"><a data-source-page="route-map" href="https://lcptodcz.lviv.ua/shema-doizdu-10-24-14-28-02-2019" target="_blank" rel="noopener">Схема доїзду</a></li>
+                            <li class="directory-link"><a data-source-page="admission-rules" href="https://lcptodcz.lviv.ua/pravila-prijomu-do-cpto-10-24-24-28-02-2019" target="_blank" rel="noopener">Правила прийому до ЦПТО</a></li>
+                            <li class="directory-link"><a data-source-page="graduation-document" href="https://lcptodcz.lviv.ua/dokument-pro-zakinchennya-10-24-34-28-02-2019" target="_blank" rel="noopener">Документ про закінчення</a></li>
+                            <li class="directory-link"><a data-source-page="practice" href="https://lcptodcz.lviv.ua/virobnicha-praktika-10-24-43-28-02-2019" target="_blank" rel="noopener">Виробнича практика</a></li>
+                            <li class="directory-link"><a data-source-page="social-protection" href="https://lcptodcz.lviv.ua/socialnij-zahist-sluhachiv-10-24-54-28-02-2019" target="_blank" rel="noopener">Соціальний захист слухачів</a></li>
+                            <li class="directory-link"><a data-source-page="employment" href="https://lcptodcz.lviv.ua/pracevlashtuvannya-10-25-14-28-02-2019" target="_blank" rel="noopener">Працевлаштування</a></li>
+                            <li class="directory-link"><a data-source-page="psychological-consultation" href="https://lcptodcz.lviv.ua/psihologichna-konsultaciya-10-25-24-28-02-2019" target="_blank" rel="noopener">Психологічна консультація</a></li>
+                            <li class="directory-link"><a data-source-page="successful-graduates" href="https://lcptodcz.lviv.ua/uspishni-vipuskniki-10-25-33-28-02-2019" target="_blank" rel="noopener">Успішні випускники</a></li>
+                            <li class="directory-link"><a data-source-page="entry-testing" href="https://lcptodcz.lviv.ua/vhidne-testuvannya-13-58-13-26-03-2021" target="_blank" rel="noopener">Вхідне тестування</a></li>
+                            <li class="directory-link"><a data-source-page="diia-digital-education" href="https://lcptodcz.lviv.ua/diya-cifrova-osvita-14-39-50-15-09-2020" target="_blank" rel="noopener">Дія: цифрова освіта</a></li>
+                            <li class="directory-link"><a data-source-page="student-behavior-rules" href="https://lcptodcz.lviv.ua/pravila-povedinki-zdobuvacha-osviti-v-zakladah-osviti-10-30-33-15-10-2024" target="_blank" rel="noopener">Правила поведінки здобувача освіти</a></li>
+                            <li class="directory-link"><a data-source-page="profession-survey-students" href="https://lcptodcz.lviv.ua/anketuvannya-z-profesij-16-05-35-24-03-2021" target="_blank" rel="noopener">Анкетування</a></li>
+                        </ul>
+                    </article>
+                    <article class="card directory-group">
+                        <h3>Роботодавцям і бізнесу</h3>
+                        <ul class="link-list">
+                            <li class="directory-link"><a data-source-page="employers" href="https://lcptodcz.lviv.ua/robotodavcyam-10-25-57-28-02-2019" target="_blank" rel="noopener">Роботодавцям</a></li>
+                            <li class="directory-link"><a data-source-page="groups-employers" href="https://lcptodcz.lviv.ua/grafik-formuvannya-grup-10-26-13-28-02-2019" target="_blank" rel="noopener">Графік формування груп</a></li>
+                            <li class="directory-link"><a data-source-page="practice-schedule" href="https://lcptodcz.lviv.ua/grafik-praktiki-10-26-22-28-02-2019" target="_blank" rel="noopener">Графік практики</a></li>
+                            <li class="directory-link"><a data-source-page="exam-schedule" href="https://lcptodcz.lviv.ua/grafik-provedennya-ispitiv-10-26-31-28-02-2019" target="_blank" rel="noopener">Графік проведення іспитів</a></li>
+                            <li class="directory-link"><a data-source-page="diia-business" href="https://lcptodcz.lviv.ua/diya-16-57-05-10-09-2020" target="_blank" rel="noopener">Дія.Бізнес</a></li>
+                            <li class="directory-link"><a data-source-page="fop-changes" href="https://lcptodcz.lviv.ua/vnesennya-zmin-pro-fop-11-17-56-11-09-2020" target="_blank" rel="noopener">Внесення змін про ФОП</a></li>
+                            <li class="directory-link"><a data-source-page="diia-business-start" href="https://lcptodcz.lviv.ua/diya-stvorennya-biznesu-11-36-12-11-09-2020" target="_blank" rel="noopener">Дія: створення бізнесу</a></li>
+                            <li class="directory-link"><a data-source-page="business-school" href="https://lcptodcz.lviv.ua/bezkoshtovna-nacionalna-onlajnshkola-dlya-pidpriemciv-11-53-54-23-09-2020" target="_blank" rel="noopener">Безкоштовна Національна онлайн-школа для підприємців</a></li>
+                            <li class="directory-link"><a data-source-page="fop-open" href="https://lcptodcz.lviv.ua/vidkrittya-fop-09-56-41-24-09-2020" target="_blank" rel="noopener">Відкриття ФОП</a></li>
+                            <li class="directory-link"><a data-source-page="fop-close" href="https://lcptodcz.lviv.ua/zakrittya-fop-10-05-21-24-09-2020" target="_blank" rel="noopener">Закриття ФОП</a></li>
+                            <li class="directory-link"><a data-source-page="employer-survey" href="https://lcptodcz.lviv.ua/anketuvannya-robotodavciv-10-33-12-03-03-2021" target="_blank" rel="noopener">Анкетування роботодавців</a></li>
+                        </ul>
+                    </article>
+                    <article class="card directory-group">
+                        <h3>Матеріали, політики, відгуки</h3>
+                        <ul class="link-list">
+                            <li class="directory-link"><a data-source-page="combatants" href="https://lcptodcz.lviv.ua/dlya-uchasnikiv-bojovih-dij-16-12-30-13-01-2025" target="_blank" rel="noopener">Для учасників бойових дій</a></li>
+                            <li class="directory-link"><a data-source-page="anti-bullying" href="https://lcptodcz.lviv.ua/antibulingova-programa-u-lvivskomu-centri-pto-dsz-14-07-13-07-11-2024" target="_blank" rel="noopener">Антибулінгова програма</a></li>
+                            <li class="directory-link"><a data-source-page="disability" href="https://lcptodcz.lviv.ua/dlya-osib-z-invalidnistju-12-13-53-03-03-2021" target="_blank" rel="noopener">Для осіб з інвалідністю</a></li>
+                            <li class="directory-link"><a data-source-page="presentations" href="https://lcptodcz.lviv.ua/prezentacii-10-26-42-28-02-2019" target="_blank" rel="noopener">Презентація</a></li>
+                            <li class="directory-link"><a data-source-page="center-presentation" href="https://lcptodcz.lviv.ua/prezentaciya-cpto-10-26-52-28-02-2019" target="_blank" rel="noopener">Презентація ЦПТО</a></li>
+                            <li class="directory-link"><a data-source-page="profession-presentation" href="https://lcptodcz.lviv.ua/prezentaciya-profesij-10-27-00-28-02-2019" target="_blank" rel="noopener">Презентація професій</a></li>
+                            <li class="directory-link"><a data-source-page="photo" href="https://lcptodcz.lviv.ua/photo" target="_blank" rel="noopener">Фотогалерея</a></li>
+                            <li class="directory-link"><a data-source-page="legal-base" href="https://lcptodcz.lviv.ua/zakonodavchonormativna-baza-10-27-18-28-02-2019" target="_blank" rel="noopener">Законодавчо-нормативна база</a></li>
+                            <li class="directory-link"><a data-source-page="pto-centers" href="https://lcptodcz.lviv.ua/centri-pto-dsz-posilannya-na-ih-sajti-10-27-32-28-02-2019" target="_blank" rel="noopener">Центри ПТО ДСЗ</a></li>
+                            <li class="directory-link"><a data-source-page="feedback" href="https://lcptodcz.lviv.ua/zvorotnij-zv%E2%80%99yazok-10-28-17-28-02-2019" target="_blank" rel="noopener">Зворотний зв'язок</a></li>
+                            <li class="directory-link"><a data-source-page="profession-survey" href="https://lcptodcz.lviv.ua/anketuvannya-profesij-14-42-41-26-02-2021" target="_blank" rel="noopener">Анкетування з професій</a></li>
+                            <li class="directory-link"><a data-source-page="international" href="https://lcptodcz.lviv.ua/mizhnarodna-diyalnist-15-47-00-03-02-2022" target="_blank" rel="noopener">Міжнародна діяльність</a></li>
+                            <li class="directory-link"><a data-source-page="reviews" href="https://lcptodcz.lviv.ua/vidguki-sluhachiv-10-03-48-14-08-2024" target="_blank" rel="noopener">Відгуки слухачів</a></li>
+                            <li class="directory-link"><a data-source-page="reviews-form" href="https://lcptodcz.lviv.ua/vidguki-13-43-23-14-08-2024" target="_blank" rel="noopener">Відгуки</a></li>
+                        </ul>
+                    </article>
+                    <article class="card directory-group">
+                        <h3>Новини 2026</h3>
+                        <ul class="link-list">
+                            <li class="directory-link"><a data-source-page="news" href="https://lcptodcz.lviv.ua/news" target="_blank" rel="noopener">Новини</a></li>
+                            <li class="directory-link"><a data-source-page="news-life-saving-1" href="https://lcptodcz.lviv.ua/news/13-41-22-13-05-2026/" target="_blank" rel="noopener">Знання, що рятують життя!</a></li>
+                            <li class="directory-link"><a data-source-page="news-agrodrones" href="https://lcptodcz.lviv.ua/news/10-50-13-11-05-2026/" target="_blank" rel="noopener">Навчання з використання агродронів</a></li>
+                            <li class="directory-link"><a data-source-page="news-life-saving-2" href="https://lcptodcz.lviv.ua/news/10-27-03-11-05-2026/" target="_blank" rel="noopener">Знання, що рятують життя</a></li>
+                            <li class="directory-link"><a data-source-page="news-business" href="https://lcptodcz.lviv.ua/news/16-12-34-08-02-2023/" target="_blank" rel="noopener">Для тих, хто хоче розпочати або розширити бізнес</a></li>
+                            <li class="directory-link"><a data-source-page="news-remarket" href="https://lcptodcz.lviv.ua/news/13-37-51-04-05-2026/" target="_blank" rel="noopener">Проєкт REMARKET</a></li>
+                            <li class="directory-link"><a data-source-page="news-testing-course" href="https://lcptodcz.lviv.ua/news/11-37-57-22-04-2026/" target="_blank" rel="noopener">Курс тестувальника програмного забезпечення</a></li>
+                            <li class="directory-link"><a data-source-page="news-crop-digital" href="https://lcptodcz.lviv.ua/news/12-31-47-20-04-2026/" target="_blank" rel="noopener">Оцифруйте свій врожай за 5 днів</a></li>
+                            <li class="directory-link"><a data-source-page="news-easter" href="https://lcptodcz.lviv.ua/news/12-34-42-12-04-2026/" target="_blank" rel="noopener">Великдень - свято надії та відродження</a></li>
+                            <li class="directory-link"><a data-source-page="news-agro-tech" href="https://lcptodcz.lviv.ua/news/13-32-04-06-04-2026/" target="_blank" rel="noopener">Час переходити на ти з агротехнологіями</a></li>
+                            <li class="directory-link"><a data-source-page="news-skills4recovery" href="https://lcptodcz.lviv.ua/news/13-00-54-27-03-2026/" target="_blank" rel="noopener">Skills4Recovery і сталість професійної освіти</a></li>
+                            <li class="directory-link"><a data-source-page="news-archive-last" href="https://lcptodcz.lviv.ua/news/?p=53" target="_blank" rel="noopener">Архів новин: остання сторінка</a></li>
+                        </ul>
+                    </article>
+                    <article class="card directory-group">
+                        <h3>Державні та партнерські ресурси</h3>
+                        <ul class="link-list">
+                            <li class="directory-link"><a data-source-page="president" href="https://www.president.gov.ua/" target="_blank" rel="noopener">Президент України</a></li>
+                            <li class="directory-link"><a data-source-page="rada" href="https://rada.gov.ua/" target="_blank" rel="noopener">Верховна Рада України</a></li>
+                            <li class="directory-link"><a data-source-page="kmu" href="https://www.kmu.gov.ua/ua" target="_blank" rel="noopener">Кабінет Міністрів України</a></li>
+                            <li class="directory-link"><a data-source-page="mon" href="https://mon.gov.ua/ua" target="_blank" rel="noopener">Міністерство освіти і науки України</a></li>
+                            <li class="directory-link"><a data-source-page="dcz" href="https://www.dcz.gov.ua/" target="_blank" rel="noopener">Державна служба зайнятості</a></li>
+                            <li class="directory-link"><a data-source-page="pto-education" href="https://mon.gov.ua/ua/tag/profesiyno-tekhnichna-osvita" target="_blank" rel="noopener">Професійно-технічна освіта</a></li>
+                            <li class="directory-link"><a data-source-page="edbo" href="https://registry.edbo.gov.ua/university/3067/professions/" target="_blank" rel="noopener">ЄДЕБО: освітня діяльність центру</a></li>
+                            <li class="directory-link"><a data-source-page="youtube-film" href="https://youtu.be/gQiwAQlEGlc" target="_blank" rel="noopener">Фільм про роботу Львівського центру ПТО ДСЗ</a></li>
+                        </ul>
+                    </article>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
 
-    <footer id="contacts">
-        <div class="container">
-            <div class="footer-grid">
-                <div>
-                    <h4>ЛЦ ПТО ДСЗ</h4>
-                    <p>Сучасний центр професійно-технічної освіти у Львові. Формуємо фахівців для відбудови та економічного розвитку України.</p>
-                </div>
-                <div>
-                    <h4>Навігація</h4>
-                    <ul>
-                        <li><a href="#home">Головна</a></li>
-                        <li><a href="#courses">Всі курси</a></li>
-                        <li><a href="#news">Новини</a></li>
-                        <li><a href="#">Вступнику</a></li>
-                        <li><a href="#">Партнерам</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Контакти</h4>
-                    <ul>
-                        <li>📍 м. Львів</li>
-                        <li>📞 <a href="tel:+380322000000">+38 (032) 000-00-00</a></li>
-                        <li>✉️ <a href="mailto:info@lcptodcz.lviv.ua">info@lcptodcz.lviv.ua</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Інформація</h4>
-                    <ul>
-                        <li><a href="#">Публічні закупівлі</a></li>
-                        <li><a href="#">Вакансії центру</a></li>
-                        <li><a href="#">Версія для людей з порушеннями зору</a></li>
-                    </ul>
-                </div>
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <h2>ЛЦПТО ДСЗ</h2>
+                <p>Львівський центр професійно-технічної освіти державної служби зайнятості. Контент джерельного сайту доступний за ліцензією Creative Commons Attribution 4.0 International License, якщо не зазначено інше.</p>
             </div>
-            <div class="copyright">
-                &copy; 2026 Львівський центр ПТО ДСЗ. Усі права захищено.
+            <div>
+                <h3>Контакти</h3>
+                <ul class="link-list">
+                    <li>м. Львів, вул. Княгині Ольги, 122</li>
+                    <li><a href="mailto:profc@locz.gov.ua">profc@locz.gov.ua</a></li>
+                    <li><a href="tel:+380322322262">(032) 232-22-62</a></li>
+                </ul>
             </div>
+            <div>
+                <h3>Офіційні розділи</h3>
+                <ul class="link-list">
+                    <li><a href="#professions">Професії</a></li>
+                    <li><a href="#services">Освітні послуги</a></li>
+                    <li><a href="#resources">Каталог джерела</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <span>2019-2026 © Львівський центр професійно-технічної освіти державної служби зайнятості</span>
         </div>
     </footer>
 
+    <script>
+        const header = document.getElementById('siteHeader');
+        const menuButton = document.getElementById('menuButton');
+        const nav = document.getElementById('siteNav');
+        const navLinks = [...document.querySelectorAll('.nav-link')];
+        const sections = [...document.querySelectorAll('main section[id]')];
+        const search = document.getElementById('sourceSearch');
+        const directoryLinks = [...document.querySelectorAll('.directory-link')];
+
+        menuButton.addEventListener('click', () => {
+            const isOpen = nav.classList.toggle('active');
+            menuButton.classList.toggle('active', isOpen);
+            menuButton.setAttribute('aria-expanded', String(isOpen));
+            document.body.classList.toggle('nav-open', isOpen);
+        });
+
+        navLinks.forEach((link) => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+                menuButton.classList.remove('active');
+                menuButton.setAttribute('aria-expanded', 'false');
+                document.body.classList.remove('nav-open');
+            });
+        });
+
+        const setHeaderState = () => {
+            header.classList.toggle('scrolled', window.scrollY > 12);
+        };
+        setHeaderState();
+        window.addEventListener('scroll', setHeaderState, { passive: true });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                const activeLink = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
+                if (!activeLink) return;
+                navLinks.forEach((link) => link.classList.remove('active'));
+                activeLink.classList.add('active');
+            });
+        }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+
+        sections.forEach((section) => observer.observe(section));
+
+        search.addEventListener('input', () => {
+            const query = search.value.trim().toLowerCase();
+            directoryLinks.forEach((item) => {
+                const text = item.textContent.toLowerCase();
+                item.classList.toggle('hidden', query.length > 0 && !text.includes(query));
+            });
+        });
+    </script>
 </body>
 </html>
